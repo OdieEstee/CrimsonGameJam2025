@@ -1,5 +1,10 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1762580434
+::res://::1762589760
+character_body_2d.gd::GDScript::6090149513850704100::1762585673::0::1::::<>CharacterBody2D<><>0<>0<><>::
 icon.svg::CompressedTexture2D::7625736999748444264::1762575214::1762580440::1::::<><><>0<>0<>e9555b4d449ca66b88b041332ea70d9f<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
-node_2d.tscn::PackedScene::960136954212122520::1762578547::0::1::::<><><>0<>0<><>::
+Level 0.tscn::PackedScene::6774963473111918574::1762585383::0::1::::<><><>0<>0<><>::uid://diw6fis34kuwk::::res://level_0.gd<>uid://dgv71lbgp8xem::::res://icon.svg<>uid://cs1d4w4bk0jo3::::res://character_body_2d.gd
+level_0.gd::GDScript::7768080715822805350::1762585383::0::1::::<>Node2D<><>0<>0<><>::
+node_2d.tscn::PackedScene::960136954212122520::1762583071::0::1::::<><><>0<>0<><>::
+Pause Menu.tscn::PackedScene::7503994026284694137::1762589732::0::1::::<><><>0<>0<><>::
 README.md::TextFile::-1::1762579009::0::1::::<><><>0<>0<><>::
+rigid_body_2d.gd::GDScript::2928569196133660255::1762584870::0::1::::<>RigidBody2D<><>0<>0<><>::

@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://c3r3wnkluh7ig"]
+[gd_scene load_steps=12 format=3 uid="uid://c3r3wnkluh7ig"]
 
 [ext_resource type="Script" uid="uid://diw6fis34kuwk" path="res://level_0.gd" id="1_0cwry"]
 [ext_resource type="Texture2D" uid="uid://dgv71lbgp8xem" path="res://icon.svg" id="1_c8imh"]
 [ext_resource type="Script" uid="uid://cs1d4w4bk0jo3" path="res://character_body_2d.gd" id="2_avkrb"]
+[ext_resource type="Script" uid="uid://crj03aqeenifg" path="res://area_2d.gd" id="4_ghhfo"]
 
 [sub_resource type="Gradient" id="Gradient_c8imh"]
 colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 1)
@@ -15,6 +16,16 @@ size = Vector2(722, 64)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0cwry"]
 size = Vector2(127, 128)
+
+[sub_resource type="Gradient" id="Gradient_gkrj2"]
+offsets = PackedFloat32Array(0.02, 1)
+colors = PackedColorArray(0, 1, 0, 1, 0, 1, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_jxxqn"]
+gradient = SubResource("Gradient_gkrj2")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r7xfy"]
+size = Vector2(64, 64)
 
 [node name="Level0" type="Node2D"]
 script = ExtResource("1_0cwry")
@@ -45,17 +56,29 @@ offset_right = 8.0
 offset_bottom = 8.0
 text = "PLAY"
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+[node name="Player" type="CharacterBody2D" parent="."]
 position = Vector2(-492, -15)
 script = ExtResource("2_avkrb")
 
-[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+[node name="Sprite2D" type="Sprite2D" parent="Player"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
 position = Vector2(0.5, 0)
 shape = SubResource("RectangleShape2D_0cwry")
 
-[node name="Icon" type="Sprite2D" parent="CharacterBody2D"]
+[node name="Icon" type="Sprite2D" parent="Player"]
 texture = ExtResource("1_c8imh")
 
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(-275, -2)
+script = ExtResource("4_ghhfo")
+next_scene = "uid://nxdkys3nnrp5"
+
+[node name="Area2D" type="Sprite2D" parent="Area2D"]
+texture = SubResource("GradientTexture2D_jxxqn")
+
+[node name="Area2D2" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_r7xfy")
+
 [connection signal="pressed" from="Control/Button" to="." method="_on_button_pressed"]
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]

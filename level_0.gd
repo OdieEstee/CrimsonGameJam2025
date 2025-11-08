@@ -12,4 +12,4 @@ func _process(delta: float) -> void:
 
 
 func _on_button_pressed() -> void:
-	$CharacterBody2D.move_right = true
+	$Player.move_right = true
