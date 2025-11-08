@@ -1,8 +1,10 @@
-CollisionShape2D
+Node2D
+RigidBody2D
+Area2D
 Sprite2D
+CollisionShape2D
 CharacterBody2D
 Button
 Control
 StaticBody2D
-RigidBody2D
 Camera2D
