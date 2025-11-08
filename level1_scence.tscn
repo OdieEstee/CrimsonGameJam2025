@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=4 uid="uid://oh0igg7w6du6"]
+[gd_scene load_steps=27 format=4 uid="uid://b8yitm7k5xetj"]
 
 [ext_resource type="Texture2D" uid="uid://b23sbto4vmu47" path="res://Texture/TX Chest Animation.png" id="1_mvppm"]
 [ext_resource type="Texture2D" uid="uid://bp3it8kesv2q4" path="res://Texture/TX FX Flame.png" id="2_itsq8"]
