@@ -1,0 +1,61 @@
+[gd_scene load_steps=8 format=3 uid="uid://c3r3wnkluh7ig"]
+
+[ext_resource type="Script" uid="uid://diw6fis34kuwk" path="res://level_0.gd" id="1_0cwry"]
+[ext_resource type="Texture2D" uid="uid://dgv71lbgp8xem" path="res://icon.svg" id="1_c8imh"]
+[ext_resource type="Script" uid="uid://cs1d4w4bk0jo3" path="res://character_body_2d.gd" id="2_avkrb"]
+
+[sub_resource type="Gradient" id="Gradient_c8imh"]
+colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_0cwry"]
+gradient = SubResource("Gradient_c8imh")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_avkrb"]
+size = Vector2(722, 64)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0cwry"]
+size = Vector2(127, 128)
+
+[node name="Level0" type="Node2D"]
+script = ExtResource("1_0cwry")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(-481, 99)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(264.5, 0)
+scale = Vector2(11.234375, 1)
+texture = SubResource("GradientTexture2D_0cwry")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(266, 0)
+shape = SubResource("RectangleShape2D_avkrb")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Button" type="Button" parent="Control"]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+text = "PLAY"
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+position = Vector2(-492, -15)
+script = ExtResource("2_avkrb")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(0.5, 0)
+shape = SubResource("RectangleShape2D_0cwry")
+
+[node name="Icon" type="Sprite2D" parent="CharacterBody2D"]
+texture = ExtResource("1_c8imh")
+
+[connection signal="pressed" from="Control/Button" to="." method="_on_button_pressed"]
