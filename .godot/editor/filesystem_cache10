@@ -1,5 +1,26 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1762580434
-icon.svg::CompressedTexture2D::7625736999748444264::1762575214::1762580440::1::::<><><>0<>0<>e9555b4d449ca66b88b041332ea70d9f<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
-node_2d.tscn::PackedScene::960136954212122520::1762578547::0::1::::<><><>0<>0<><>::
-README.md::TextFile::-1::1762579009::0::1::::<><><>0<>0<><>::
+::res://::1762639263
+character_body_2d.gd::GDScript::6090149513850704100::1762590938::0::1::::<>CharacterBody2D<><>0<>0<><>::
+icon.svg::CompressedTexture2D::7625736999748444264::1762581605::1762581605::1::::<><><>0<>0<>e9555b4d449ca66b88b041332ea70d9f<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
+level1_scence.tscn::PackedScene::998626992274755499::1762598087::0::1::::<><><>0<>0<><>::
+level2_scene.tscn::PackedScene::741679541787937073::1762598113::0::1::::<><><>0<>0<><>::
+level3_scene.tscn::PackedScene::8367524009565106708::1762598130::0::1::::<><><>0<>0<><>::
+Level 0.tscn::PackedScene::6774963473111918574::1762590938::0::1::::<><><>0<>0<><>::uid://diw6fis34kuwk::::res://level_0.gd<>uid://dgv71lbgp8xem::::res://icon.svg<>uid://cs1d4w4bk0jo3::::res://character_body_2d.gd
+level_0.gd::GDScript::7768080715822805350::1762590938::0::1::::<>Node2D<><>0<>0<><>::
+node_2d.tscn::PackedScene::960136954212122520::1762597837::0::1::::<><><>0<>0<><>::
+Pause Menu.tscn::PackedScene::7503994026284694137::1762590938::0::1::::<><><>0<>0<><>::
+README.md::TextFile::-1::1762581605::0::1::::<><><>0<>0<><>::
+rigid_body_2d.gd::GDScript::2928569196133660255::1762590938::0::1::::<>RigidBody2D<><>0<>0<><>::
+tileset.tres::TileSet::163191425275629814::1762590979::0::1::::<><><>0<>0<><>::
+::res://Texture/::1762639263
+TX Chest Animation.png::CompressedTexture2D::4340417751614451098::1762633965::1762633966::1::::<><><>0<>0<>cdd0474c91d4ece74385472648450cf6<>res://.godot/imported/TX Chest Animation.png-e842fba40aff9e192c293c1575666d34.ctex::
+TX FX Flame.png::CompressedTexture2D::3497577330328837105::1762633965::1762633965::1::::<><><>0<>0<>d649cb26748f2f942cec1298e1c1730c<>res://.godot/imported/TX FX Flame.png-80d15c79101d825f142cfc9a8dd71151.ctex::
+TX FX Torch Flame.png::CompressedTexture2D::5280800884539901210::1762633965::1762633965::1::::<><><>0<>0<>387a33bb78a86048f09bb2ba8d5cd652<>res://.godot/imported/TX FX Torch Flame.png-3f0823327d6ab4c4c9211962981da03b.ctex::
+TX Tileset Ground.png::CompressedTexture2D::8955995797504184856::1762633965::1762633966::1::::<><><>0<>0<>e89fb6bae9f634dd2a8d6d2c6af4c906<>res://.godot/imported/TX Tileset Ground.png-09c49e674b4e05fa0e1740174a329964.ctex::
+TX Village Props.png::CompressedTexture2D::111412106726403343::1762633965::1762633966::1::::<><><>0<>0<>8b4e557aa05186c23bcee41172eca3f2<>res://.godot/imported/TX Village Props.png-111f6fb80172e48598527cc8cc1180bf.ctex::
+::res://tiles/::1762639263
+::res://tiles/Backgrounds/::1762639258
+Clouds.png::CompressedTexture2D::4339916441965997954::1762639258::1762639263::1::::<><><>0<>0<>382969e264684ec0859a67f88782b5e1<>res://.godot/imported/Clouds.png-5c91ddf7d10638ab2dd42eeb867322d4.ctex::
+Grass Mountains.png::CompressedTexture2D::5740516085316589440::1762639258::1762639263::1::::<><><>0<>0<>f75ee98f85bc5ff974fa5e672a26ccce<>res://.godot/imported/Grass Mountains.png-0ff735a67d6333e714985bf6edafbd92.ctex::
+Rock Mountains.png::CompressedTexture2D::7712715458532051067::1762639258::1762639263::1::::<><><>0<>0<>8a5295f3781b2cb828c2502b53654a61<>res://.godot/imported/Rock Mountains.png-31ac7562f73029ad484405e88c16da76.ctex::
+Sky.png::CompressedTexture2D::6111141196855501440::1762639258::1762639263::1::::<><><>0<>0<>4f85df22af497ecf26839be2ebe27ce1<>res://.godot/imported/Sky.png-f7a9d7a598e5496eeb279a675838b27b.ctex::
