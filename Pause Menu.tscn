@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://de58xkfxf4cer"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 110
+
+[node name="Pause" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -1092.0
+offset_top = -1134.0
+offset_right = 556.0
+offset_bottom = 770.0
+
+[node name="color of menu" type="ColorRect" parent="CanvasLayer/Pause"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 37.0
+offset_top = -2084.0
+offset_right = 1181.0
+offset_bottom = 49.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.28879282, 0.4066226, 0.6913778, 0.54509807)
