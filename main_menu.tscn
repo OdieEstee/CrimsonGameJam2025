@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://w07a7rbj34wp" path="res://Backgrounds/Clouds.png" id="1_nlkkf"]
 [ext_resource type="Texture2D" uid="uid://4p6ll7a68jlc" path="res://Backgrounds/Grass Mountains.png" id="2_qe12f"]
-[ext_resource type="Texture2D" path="res://Backgrounds/free-villagers-sprite-sheets-pixel-art/Rock Mountains.png" id="3_8qtwp"]
+[ext_resource type="Texture2D" uid="uid://ck5bfjcg1n75h" path="res://Backgrounds/Rock Mountains.png" id="3_8qtwp"]
 [ext_resource type="Texture2D" uid="uid://wimt2s3xavkr" path="res://Backgrounds/Sky.png" id="4_dy7ct"]
 [ext_resource type="Texture2D" uid="uid://bt768615tgd0" path="res://Texture/TX Village Props.png" id="5_0o4t1"]
 [ext_resource type="Texture2D" uid="uid://d0ul7bkcd55yq" path="res://Texture/TX Tileset Ground.png" id="6_0k4wn"]
