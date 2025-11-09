@@ -9,11 +9,15 @@ extends CharacterBody2D
 @export var step_forward_check : float = 6.0    # how far forward to test (pixels)
 @export var step_margin : float = 0.01          # small margin for intersect_shape queries
 
+@export var push_multiplier : float = 1.2
+@export var max_push_impulse : float = 600.0
+
 @onready var _animated_sprite = $AnimatedSprite2D
 @onready var _col_shape_node = $CollisionShape2D   # adapt path if your CollisionShape2D is elsewhere
 
 func _physics_process(delta):
 	# gravity
+	var pre_vel : Vector2 = velocity
 	if not is_on_floor():
 		velocity.y += gravity * delta
 	else:
@@ -24,12 +28,37 @@ func _physics_process(delta):
 		velocity.x = move_speed
 		_animated_sprite.play("Walk")
 		_try_step_up(Vector2(1, 0))
+		
 	else:
 		velocity.x = 0
 		_animated_sprite.play("Idle")
 
 	# finally let CharacterBody2D handle motion
 	move_and_slide()
+	
+	for i in range(get_slide_collision_count()):
+		var col: KinematicCollision2D = get_slide_collision(i)
+		var c := col.get_collider()
+		if c is RigidBody2D:
+			var rb: RigidBody2D = c
+			var n: Vector2 = col.get_normal()
+
+			# Desired push speed along the normal (how fast you want the box to move away)
+			var target_push_speed: float = move_speed * 0.9
+
+			# Current relative speed along the normal (pre-move so it isn’t zeroed)
+			var rel_normal_speed: float = maxf(0.0, (pre_vel - rb.linear_velocity).dot(-n))
+
+			# How much more speed we want the box to gain this frame
+			var needed_speed: float = maxf(0.0, target_push_speed - rel_normal_speed)
+
+			# Force = m * a  ≈ m * (Δv / Δt)
+			var F: float = rb.mass * (needed_speed / max(delta, 1e-6))
+
+			var contact_local: Vector2 = col.get_position() - rb.global_position
+			rb.apply_force(-n * F, contact_local)   # steady shove
+
+
 
 # --- Step-up using shape intersection tests (works with RigidBody2D) ---
 func _try_step_up(direction: Vector2) -> void:

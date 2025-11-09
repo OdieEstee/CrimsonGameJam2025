@@ -1,11 +1,31 @@
-[gd_scene load_steps=14 format=4 uid="uid://ddwy5dyswoacx"]
+[gd_scene load_steps=49 format=4 uid="uid://ddwy5dyswoacx"]
 
 [ext_resource type="Texture2D" uid="uid://d06hp3e88urtr" path="res://Backgrounds/Cave Tileset Pack (extract.me)/PNG files/CaveBG.png" id="1_hcp5p"]
+[ext_resource type="Script" uid="uid://bn0vqcg0ioimi" path="res://level_4_scene.gd" id="1_sndqy"]
 [ext_resource type="Texture2D" uid="uid://c2sj3qdtc5hoe" path="res://Backgrounds/Cave Tileset Pack (extract.me)/PNG files/CaveG.png" id="2_ngd5a"]
 [ext_resource type="Texture2D" uid="uid://da4codde2j8q1" path="res://Backgrounds/Cave Tileset Pack (extract.me)/PNG files/ParallaxCave1.png" id="3_efita"]
 [ext_resource type="Texture2D" uid="uid://b8gl2m8hmcdfa" path="res://Backgrounds/Cave Tileset Pack (extract.me)/PNG files/ParallaxCave2.png" id="4_n7mud"]
 [ext_resource type="Texture2D" uid="uid://dgkcnc5lr4ox4" path="res://Backgrounds/Cave Tileset Pack (extract.me)/PNG files/ParallaxCave3.png" id="5_abq2e"]
 [ext_resource type="Texture2D" uid="uid://b2r1eq1xn5qow" path="res://Backgrounds/Cave Tileset Pack (extract.me)/PNG files/ParallaxCave4.png" id="6_sjxrm"]
+[ext_resource type="PackedScene" uid="uid://63th6ftg6nx0" path="res://plank_edit.tscn" id="8_0x8ji"]
+[ext_resource type="Texture2D" uid="uid://dnpfha34p527y" path="res://Texture/PlankIcon.png" id="9_j7hcv"]
+[ext_resource type="PackedScene" uid="uid://bencwinyt78er" path="res://plank_physics_1.tscn" id="10_tfu07"]
+[ext_resource type="Script" uid="uid://cs1d4w4bk0jo3" path="res://character_body_2d.gd" id="11_5b75k"]
+[ext_resource type="Texture2D" uid="uid://da1cjye7l2agn" path="res://free-villagers-sprite-sheets-pixel-art/6 Girl/Girl_idle.png" id="12_xmb3d"]
+[ext_resource type="Texture2D" uid="uid://dobag6f1v15sc" path="res://free-villagers-sprite-sheets-pixel-art/6 Girl/Girl_walk.png" id="13_ug4ca"]
+[ext_resource type="PackedScene" uid="uid://de58xkfxf4cer" path="res://Pause Menu.tscn" id="14_uqrs5"]
+[ext_resource type="Script" uid="uid://c1kvtwu4rta3d" path="res://chest.gd" id="15_yappv"]
+[ext_resource type="Texture2D" uid="uid://gnwcx6rkkr2k" path="res://Texture/Chest6.png" id="16_otk3i"]
+[ext_resource type="Texture2D" uid="uid://memmb2a3c8gk" path="res://Texture/Chest7.png" id="17_ygalv"]
+[ext_resource type="Texture2D" uid="uid://dovwl3kxuc8gy" path="res://Texture/Chest5.png" id="18_1bs1o"]
+[ext_resource type="Texture2D" uid="uid://ddctl3r446i22" path="res://Texture/Chest4.png" id="19_tfref"]
+[ext_resource type="Texture2D" uid="uid://dp8kiiwwyrq38" path="res://Texture/Chest3.png" id="20_sipqi"]
+[ext_resource type="Texture2D" uid="uid://6r57sd268vh7" path="res://Texture/Chest2.png" id="21_o6j57"]
+[ext_resource type="Texture2D" uid="uid://umc73tpyhtsv" path="res://Texture/Chest1.png" id="22_vqdx8"]
+[ext_resource type="Script" uid="uid://cetw5o470fdqk" path="res://placement_area.gd" id="23_6njhy"]
+[ext_resource type="PackedScene" uid="uid://dpaxpn8y43xr1" path="res://stone_physics.tscn" id="24_r71f8"]
+[ext_resource type="PackedScene" uid="uid://rajdd5xvxwxn" path="res://stone_edit.tscn" id="25_7bvgl"]
+[ext_resource type="Texture2D" uid="uid://d3htq5rwk4qvp" path="res://Texture/rock32_clean.png" id="26_pr4vs"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5x7af"]
 texture = ExtResource("1_hcp5p")
@@ -97,9 +117,9 @@ texture_region_size = Vector2i(32, 32)
 23:4/0 = 0
 23:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(0, 0, 16, 16, -16, 16, -16, -16)
 25:4/0 = 0
-25:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, 16, 16, -16, 16)
+25:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-0.2628708, -0.17524719, 16, -16, 16, 16, -16, 16)
 27:4/0 = 0
-27:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+27:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 0.78861237, 0, 16, 16, -16, 16)
 29:4/0 = 0
 29:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 30:4/0 = 0
@@ -4420,7 +4440,138 @@ sources/3 = SubResource("TileSetAtlasSource_qh4uo")
 sources/4 = SubResource("TileSetAtlasSource_a0ai1")
 sources/5 = SubResource("TileSetAtlasSource_lpfnf")
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_7f4ee"]
+atlas = ExtResource("12_xmb3d")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vk0f4"]
+atlas = ExtResource("12_xmb3d")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d1lpl"]
+atlas = ExtResource("12_xmb3d")
+region = Rect2(96, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kkhhu"]
+atlas = ExtResource("12_xmb3d")
+region = Rect2(144, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x0bgk"]
+atlas = ExtResource("13_ug4ca")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fijtx"]
+atlas = ExtResource("13_ug4ca")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q4ori"]
+atlas = ExtResource("13_ug4ca")
+region = Rect2(96, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_buavi"]
+atlas = ExtResource("13_ug4ca")
+region = Rect2(144, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pnupd"]
+atlas = ExtResource("13_ug4ca")
+region = Rect2(192, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h7a1x"]
+atlas = ExtResource("13_ug4ca")
+region = Rect2(240, 0, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_g0de3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7f4ee")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vk0f4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d1lpl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kkhhu")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x0bgk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fijtx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q4ori")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_buavi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pnupd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h7a1x")
+}],
+"loop": true,
+"name": &"Walk",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_cieh7"]
+radius = 4.0
+height = 22.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_slo8w"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("16_otk3i")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("16_otk3i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_ygalv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_1bs1o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_tfref")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_sipqi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_o6j57")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_vqdx8")
+}],
+"loop": true,
+"name": &"open",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6a8yw"]
+size = Vector2(18, 14)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mbq3t"]
+size = Vector2(534, 298)
+
 [node name="level4_scene" type="Node2D"]
+script = ExtResource("1_sndqy")
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_dfy6w")
@@ -4453,3 +4604,121 @@ tile_set = SubResource("TileSet_dfy6w")
 [node name="TileMapLayer7" type="TileMapLayer" parent="TileMap"]
 visible = false
 tile_set = SubResource("TileSet_dfy6w")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(384, -215)
+zoom = Vector2(1.5, 1.5)
+
+[node name="PlankEdit" parent="." instance=ExtResource("8_0x8ji")]
+position = Vector2(44, 21)
+
+[node name="PlankButton" type="Button" parent="."]
+offset_left = 306.0
+offset_top = -210.0
+offset_right = 380.0
+offset_bottom = -195.0
+icon = ExtResource("9_j7hcv")
+
+[node name="EditSpawnParent" type="Node2D" parent="."]
+position = Vector2(-1, 20)
+
+[node name="PhysicsSpawnParent" type="Node2D" parent="."]
+
+[node name="PlayButton" type="Button" parent="."]
+offset_left = 168.0
+offset_top = -31.0
+offset_right = 215.0
+text = "PLAY"
+
+[node name="PlankPhysics1" parent="." instance=ExtResource("10_tfu07")]
+position = Vector2(121, 21)
+gravity_scale = 0.1
+linear_damp = 100.0
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+position = Vector2(26, -88)
+script = ExtResource("11_5b75k")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
+sprite_frames = SubResource("SpriteFrames_g0de3")
+animation = &"Walk"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(-11, 12)
+shape = SubResource("CapsuleShape2D_cieh7")
+
+[node name="PAUSE" parent="." instance=ExtResource("14_uqrs5")]
+visible = false
+offset_left = 83.0
+offset_top = -77.0
+offset_right = 83.0
+offset_bottom = -77.0
+
+[node name="Chest" type="Area2D" parent="."]
+position = Vector2(363, -59)
+script = ExtResource("15_yappv")
+next_scene = "uid://ddwy5dyswoacx"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Chest"]
+position = Vector2(0, -4)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_slo8w")
+animation = &"open"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Chest"]
+position = Vector2(0, -11)
+shape = SubResource("RectangleShape2D_6a8yw")
+
+[node name="MaterialsLabel" type="Label" parent="."]
+offset_left = 5.0
+offset_top = -210.0
+offset_right = 31.0
+offset_bottom = -187.0
+
+[node name="Label" type="Label" parent="."]
+offset_left = 276.0
+offset_top = -214.0
+offset_right = 316.0
+offset_bottom = -191.0
+text = "100"
+
+[node name="PlacementArea" type="Area2D" parent="."]
+position = Vector2(193, -106)
+script = ExtResource("23_6njhy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlacementArea"]
+position = Vector2(73, -196)
+shape = SubResource("RectangleShape2D_mbq3t")
+
+[node name="ResetButton" type="Button" parent="."]
+visible = false
+offset_left = 165.0
+offset_top = -31.0
+offset_right = 219.0
+text = "RESET"
+
+[node name="StonePhysics" parent="." instance=ExtResource("24_r71f8")]
+position = Vector2(228, 24)
+
+[node name="StoneEdit" parent="." instance=ExtResource("25_7bvgl")]
+position = Vector2(186, 25)
+
+[node name="StoneButton" type="Button" parent="."]
+offset_left = 339.0
+offset_top = -189.0
+offset_right = 379.0
+offset_bottom = -149.0
+icon = ExtResource("26_pr4vs")
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 308.0
+offset_top = -182.0
+offset_right = 348.0
+offset_bottom = -159.0
+text = "100"
+
+[connection signal="pressed" from="PlankButton" to="." method="_on_plank_button_pressed"]
+[connection signal="pressed" from="PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="body_entered" from="Chest" to="Chest" method="_on_body_entered"]
+[connection signal="pressed" from="ResetButton" to="." method="_on_reset_button_pressed"]
+[connection signal="pressed" from="StoneButton" to="." method="_on_stone_button_pressed"]
