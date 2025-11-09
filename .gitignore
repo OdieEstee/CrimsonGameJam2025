@@ -1,9 +1,10 @@
 # Godot 4+ specific ignores
 .godot/
-.nomedia
 .godot/editor/
+.godot/imported/
 .godot/uid_cache.bin
 .godot/shader_cache/
+.nomedia
 
 # Godot-specific ignores
 .import/
@@ -20,3 +21,16 @@ mono_crash.*.json
 # OS-specific
 .DS_Store
 Thumbs.db
+
+# User-specific editor files
+*.tscn-editstate-*
+*.tscn-folding-*
+*.gd.uid
+*.editor.*
+favorite_properties
+favorites
+quick_open_dialog_cache.cfg
+filesystem_cache*
+filesystem_update*
+project_metadata.cfg
+editor_layout.cfg
