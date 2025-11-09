@@ -1,31 +1,22 @@
-# ==========================
 # Godot 4+ specific ignores
-# ==========================
-.godot/editor/       # editor state, folding, recent files, layout
-.godot/shader_cache/ # compiled shader cache
-.godot/uid_cache.bin # cached unique IDs
-.godot/imported/     # auto-imported assets
+.godot/editor/
+.godot/shader_cache/
+.godot/uid_cache.bin
+.godot/imported/
+.nomedia
 
-.nomedia             # Android/OS-specific
-
-# ==========================
-# Godot project & build
-# ==========================
-.import/             # auto-imported assets
-export.cfg           # export config, can be regenerated
+# Godot-specific
+.import/
+export.cfg
 export_credentials.cfg
-*.tmp                # temporary files
-*.translation        # auto-generated translations
+*.tmp
+*.translation
 
-# ==========================
-# Mono / C# specific
-# ==========================
+# Mono
 .mono/
 data_*/
 mono_crash.*.json
 
-# ==========================
-# OS-specific
-# ==========================
+# OS
 .DS_Store
 Thumbs.db
