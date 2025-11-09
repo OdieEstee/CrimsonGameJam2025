@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=4 uid="uid://ba7opnqyud8mq"]
+[gd_scene load_steps=37 format=4 uid="uid://ba7opnqyud8mq"]
 
 [ext_resource type="Script" uid="uid://byiahdoi86m0k" path="res://level_1_scene.gd" id="1_k7365"]
 [ext_resource type="Texture2D" uid="uid://bt768615tgd0" path="res://Texture/TX Village Props.png" id="1_ws576"]
@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://bencwinyt78er" path="res://plank_physics_1.tscn" id="10_e5qob"]
 [ext_resource type="Texture2D" uid="uid://da1cjye7l2agn" path="res://free-villagers-sprite-sheets-pixel-art/6 Girl/Girl_idle.png" id="12_3rc6u"]
 [ext_resource type="Texture2D" uid="uid://dobag6f1v15sc" path="res://free-villagers-sprite-sheets-pixel-art/6 Girl/Girl_walk.png" id="13_80rtw"]
+[ext_resource type="PackedScene" uid="uid://de58xkfxf4cer" path="res://Pause Menu.tscn" id="14_80rtw"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_80rtw"]
 texture = ExtResource("1_ws576")
@@ -1776,7 +1777,7 @@ tile_set = SubResource("TileSet_q4ori")
 format = 2
 
 [node name="TileMapLayer" type="TileMapLayer" parent="TileMap"]
-tile_map_data = PackedByteArray("AAAAAP7/AQAAAAAAAAAAAP//AQAAAAIAAAABAP7/AQABAAAAAAABAP//AQABAAIAAAACAP7/AQABAAAAAAACAP//AQABAAIAAAADAP7/AQABAAAAAAADAP//AQABAAIAAAAEAP7/AQABAAAAAAAEAP//AQABAAIAAAAFAP7/AAAZAAMAAAAFAP//AQABAAIAAAAGAP7/AAAZAAMAAAAGAP//AQABAAIAAAAHAP7/AQABAAAAAAAHAP//AQABAAIAAAAIAP7/AQABAAAAAAAIAP//AQABAAIAAAAJAP7/AQABAAAAAAAJAP//AQABAAIAAAAKAP7/AQABAAAAAAAKAP//AQABAAIAAAALAP7/AQACAAAAAAALAP//AQACAAIAAAAIAPv/AAAVABAAAAAIAPz/AAAVABEAAAAJAPv/AAAWABAAAAAJAPz/AAAWABEAAAAKAPv/AAAXABAAAAAKAPz/AAAXABEAAAAKAP3/AAAXABIAAAALAPv/AAAYABAAAAALAPz/AAAYABEAAAAJAPr/AAAWAA8AAAAKAPr/AAAXAA8AAAALAPr/AAAYAA8AAAAKAPn/AAAXAA4AAAA=")
+tile_map_data = PackedByteArray("AAAAAP7/AQAAAAAAAAAAAP//AQAAAAIAAAABAP7/AQABAAAAAAABAP//AQABAAIAAAACAP7/AQABAAAAAAACAP//AQABAAIAAAADAP7/AQABAAAAAAADAP//AQABAAIAAAAEAP7/AQABAAAAAAAEAP//AQABAAIAAAAFAP7/AAAZAAMAAAAFAP//AQABAAIAAAAGAP7/AAAZAAMAAAAGAP//AQABAAIAAAAHAP7/AQABAAAAAAAHAP//AQABAAIAAAAIAP7/AQABAAAAAAAIAP//AQABAAIAAAAJAP7/AQABAAAAAAAJAP//AQABAAIAAAAKAP7/AQABAAAAAAAKAP//AQABAAIAAAALAP7/AQACAAAAAAALAP//AQACAAIAAAAIAPv/AAAVABAAAAAIAPz/AAAVABEAAAAJAPv/AAAWABAAAAAJAPz/AAAWABEAAAAKAPv/AAAXABAAAAAKAPz/AAAXABEAAAAKAP3/AAAXABIAAAALAPv/AAAYABAAAAALAPz/AAAYABEAAAAJAPr/AAAWAA8AAAAKAPr/AAAXAA8AAAALAPr/AAAYAA8AAAAKAPn/AAAXAA4AAAAIAPr/AAAVAA8AAAA=")
 tile_set = SubResource("TileSet_q4ori")
 
 [node name="TileMapLayer2" type="TileMapLayer" parent="TileMap"]
@@ -1802,10 +1803,11 @@ zoom = Vector2(3, 3)
 position = Vector2(44, 21)
 
 [node name="PlankButton" type="Button" parent="."]
-offset_left = 366.0
-offset_top = -211.0
-offset_right = 374.0
-offset_bottom = -203.0
+offset_left = 320.0
+offset_top = -220.0
+offset_right = 380.0
+offset_bottom = -189.0
+text = "PLANK"
 
 [node name="EditSpawnParent" type="Node2D" parent="."]
 position = Vector2(-1, 20)
@@ -1833,6 +1835,13 @@ frame_progress = 0.99131364
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
 position = Vector2(-11, 12)
 shape = SubResource("CapsuleShape2D_3rc6u")
+
+[node name="PAUSE" parent="." instance=ExtResource("14_80rtw")]
+visible = false
+offset_left = 83.0
+offset_top = -77.0
+offset_right = 83.0
+offset_bottom = -77.0
 
 [connection signal="pressed" from="PlankButton" to="." method="_on_plank_button_pressed"]
 [connection signal="pressed" from="PlayButton" to="." method="_on_play_button_pressed"]
