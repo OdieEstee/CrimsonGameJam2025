@@ -1,2 +1,29 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+# Normalize all text files to use LF endings
+* text=auto eol=lf
+
+# Godot-specific file types
+*.gd text eol=lf
+*.tscn text eol=lf
+*.tres text eol=lf
+*.import text eol=lf
+
+# Mono/C# if applicable
+*.cs text eol=lf
+
+# Binary files - never modify line endings
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.wav binary
+*.ogg binary
+*.mp3 binary
+*.pck binary
+*.res binary
+*.import binary
+*.exe binary
+*.dll binary
+
+# Don't diff binary files
+*.res -diff
+*.pck -diff
+*.import -diff
