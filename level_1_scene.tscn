@@ -100,7 +100,9 @@ texture_region_size = Vector2i(32, 32)
 22:3/0 = 0
 24:3/0 = 0
 25:3/0 = 0
-25:3/0/physics_layer_1/polygon_0/points = PackedVector2Array(-16, 4.8648567, 16, 4.5143623, 16, 16, -16, 16)
+25:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, 5.7411003, 16, 5.390606, 16, 16, -16, 16)
+25:3/0/physics_layer_1/polygon_0/points = PackedVector2Array(-16, 6.343937, 16, 5.9934425, 16, 16, -16, 16)
+25:3/0/custom_data_0 = true
 27:3/0 = 0
 29:3/0 = 0
 11:4/0 = 0
@@ -1211,8 +1213,11 @@ texture_region_size = Vector2i(32, 32)
 [sub_resource type="TileSet" id="TileSet_q4ori"]
 tile_size = Vector2i(32, 32)
 physics_layer_0/collision_layer = 1
+physics_layer_0/collision_mask = 4
 physics_layer_1/collision_layer = 2
-physics_layer_1/collision_mask = 3
+physics_layer_1/collision_mask = 4
+custom_data_layer_0/name = "spike"
+custom_data_layer_0/type = 1
 sources/0 = SubResource("TileSetAtlasSource_80rtw")
 sources/1 = SubResource("TileSetAtlasSource_7f4ee")
 sources/2 = SubResource("TileSetAtlasSource_vk0f4")
@@ -1832,7 +1837,7 @@ tile_set = SubResource("TileSet_q4ori")
 format = 2
 
 [node name="TileMapLayer" type="TileMapLayer" parent="TileMap"]
-tile_map_data = PackedByteArray("AAAAAP7/AQAAAAAAAAAAAP//AQAAAAIAAAABAP7/AQABAAAAAAABAP//AQABAAIAAAACAP7/AQABAAAAAAACAP//AQABAAIAAAADAP7/AQABAAAAAAADAP//AQABAAIAAAAEAP7/AQABAAAAAAAEAP//AQABAAIAAAAFAP7/AAAZAAMAAAAFAP//AQABAAIAAAAGAP7/AAAZAAMAAAAGAP//AQABAAIAAAAHAP7/AQABAAAAAAAHAP//AQABAAIAAAAIAP7/AQABAAAAAAAIAP//AQABAAIAAAAJAP7/AQABAAAAAAAJAP//AQABAAIAAAAKAP7/AQABAAAAAAAKAP//AQABAAIAAAALAP7/AQACAAAAAAALAP//AQACAAIAAAAIAPv/AAAVABAAAAAIAPz/AAAVABEAAAAJAPv/AAAWABAAAAAJAPz/AAAWABEAAAAKAPv/AAAXABAAAAAKAPz/AAAXABEAAAAKAP3/AAAXABIAAAALAPv/AAAYABAAAAALAPz/AAAYABEAAAAJAPr/AAAWAA8AAAAKAPr/AAAXAA8AAAALAPr/AAAYAA8AAAAKAPn/AAAXAA4AAAAIAPr/AAAVAA8AAAA=")
+tile_map_data = PackedByteArray("AAAAAP7/AQAAAAAAAAAAAP//AQAAAAIAAAABAP7/AQABAAAAAAABAP//AQABAAIAAAACAP7/AQABAAAAAAACAP//AQABAAIAAAADAP7/AQABAAAAAAADAP//AQABAAIAAAAEAP7/AQACAAAAAAAEAP//AQANAAUAAAAFAP//AQABAAAAAAAGAP//AQABAAAAAAAHAP7/AQAAAAAAAAAHAP//AQANAAUAABAIAP7/AQABAAAAAAAIAP//AQABAAIAAAAJAP7/AQABAAAAAAAJAP//AQABAAIAAAAKAP7/AQABAAAAAAAKAP//AQABAAIAAAALAP7/AQACAAAAAAALAP//AQACAAIAAAAIAPv/AAAVABAAAAAIAPz/AAAVABEAAAAJAPv/AAAWABAAAAAJAPz/AAAWABEAAAAKAPv/AAAXABAAAAAKAPz/AAAXABEAAAAKAP3/AAAXABIAAAALAPv/AAAYABAAAAALAPz/AAAYABEAAAAJAPr/AAAWAA8AAAAKAPr/AAAXAA8AAAALAPr/AAAYAA8AAAAKAPn/AAAXAA4AAAAIAPr/AAAVAA8AAAA=")
 tile_set = SubResource("TileSet_q4ori")
 
 [node name="TileMapLayer2" type="TileMapLayer" parent="TileMap"]
@@ -1882,6 +1887,7 @@ linear_damp = 100.0
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
 position = Vector2(26, -88)
+collision_layer = 4
 collision_mask = 3
 script = ExtResource("8_k7365")
 
@@ -1903,6 +1909,7 @@ offset_bottom = -77.0
 
 [node name="Chest" type="Area2D" parent="."]
 position = Vector2(337, -59)
+collision_mask = 5
 script = ExtResource("15_buavi")
 next_scene = "uid://qmn227ik1xws"
 

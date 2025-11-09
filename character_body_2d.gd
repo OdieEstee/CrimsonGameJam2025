@@ -35,7 +35,7 @@ func _physics_process(delta):
 
 	# finally let CharacterBody2D handle motion
 	move_and_slide()
-	
+
 	for i in range(get_slide_collision_count()):
 		var col: KinematicCollision2D = get_slide_collision(i)
 		var c := col.get_collider()
@@ -57,8 +57,6 @@ func _physics_process(delta):
 
 			var contact_local: Vector2 = col.get_position() - rb.global_position
 			rb.apply_force(-n * F, contact_local)   # steady shove
-
-
 
 # --- Step-up using shape intersection tests (works with RigidBody2D) ---
 func _try_step_up(direction: Vector2) -> void:
