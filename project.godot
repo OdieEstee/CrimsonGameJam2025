@@ -11,9 +11,13 @@ config_version=5
 [application]
 
 config/name="All At Once"
-run/main_scene="uid://c3r3wnkluh7ig"
+run/main_scene="uid://ba7opnqyud8mq"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
+
+[display]
+
+window/stretch/mode="canvas_items"
 
 [dotnet]
 

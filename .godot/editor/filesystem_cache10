@@ -1,15 +1,11 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1762644927
+::res://::1762650854
 area_2d.gd::GDScript::5986199060972267384::1762643871::0::1::::<>Area2D<><>0<>0<><>::
 character_body_2d.gd::GDScript::6090149513850704100::1762639608::0::1::::<>CharacterBody2D<><>0<>0<><>::
 icon.svg::CompressedTexture2D::7625736999748444264::1762575214::1762580440::1::::<><><>0<>0<>e9555b4d449ca66b88b041332ea70d9f<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
-level1_scene.tscn::PackedScene::8445831421456190192::1762644912::0::1::::<><><>0<>0<><>::
-Level2_scene.tscn::PackedScene::1148633036540722890::1762644721::0::1::::<><><>0<>0<><>::
-Level3_scene.tscn::PackedScene::4023705617195945397::1762644721::0::1::::<><><>0<>0<><>::
 Level 0.tscn::PackedScene::6774963473111918574::1762643871::0::1::::<><><>0<>0<><>::uid://diw6fis34kuwk::::res://level_0.gd<>uid://dgv71lbgp8xem::::res://icon.svg<>uid://cs1d4w4bk0jo3::::res://character_body_2d.gd<>uid://4nwp58uqth58::::res://plank_build.tscn<>uid://cwpudnut4hbgc::::res://plank_physics.tscn
 level_0.gd::GDScript::7768080715822805350::1762643871::0::1::::<>Node2D<><>0<>0<><>::
-level_1_scene.tscn::PackedScene::2453358305268073732::1762644914::0::1::::<><><>0<>0<><>::uid://bt768615tgd0::::res://Texture/TX Village Props.png<>uid://d0ul7bkcd55yq::::res://Texture/TX Tileset Ground.png<>uid://b23sbto4vmu47::::res://Texture/TX Chest Animation.png<>uid://w07a7rbj34wp::::res://Backgrounds/Clouds.png<>uid://4p6ll7a68jlc::::res://Backgrounds/Grass Mountains.png<>uid://ck5bfjcg1n75h::::res://Backgrounds/Rock Mountains.png<>uid://wimt2s3xavkr::::res://Backgrounds/Sky.png
-node_2d.tscn::PackedScene::960136954212122520::1762643790::0::1::::<><><>0<>0<><>::
+level_1_scene.tscn::PackedScene::2453358305268073732::1762650427::0::1::::<><><>0<>0<><>::uid://byiahdoi86m0k::::res://level_1_scene.gd<>uid://bt768615tgd0::::res://Texture/TX Village Props.png<>uid://d0ul7bkcd55yq::::res://Texture/TX Tileset Ground.png<>uid://b23sbto4vmu47::::res://Texture/TX Chest Animation.png<>uid://w07a7rbj34wp::::res://Backgrounds/Clouds.png<>uid://4p6ll7a68jlc::::res://Backgrounds/Grass Mountains.png<>uid://ck5bfjcg1n75h::::res://Backgrounds/Rock Mountains.png<>uid://wimt2s3xavkr::::res://Backgrounds/Sky.png<>uid://63th6ftg6nx0::::res://plank_edit.tscn<>uid://bencwinyt78er::::res://plank_physics_1.tscn
 Pause Menu.tscn::PackedScene::7503994026284694137::1762643871::0::1::::<><><>0<>0<><>::
 plank.gd::GDScript::1506266251464246618::1762643871::0::1::::<>RigidBody2D<><>0<>0<><>::
 plank.tscn::PackedScene::5501507334504189276::1762643871::0::1::::<><><>0<>0<><>::
@@ -17,13 +13,108 @@ plank_build.gd::GDScript::8856652587149597496::1762643871::0::1::::<>CharacterBo
 plank_build.tscn::PackedScene::2063677564665047697::1762643871::0::1::::<><><>0<>0<><>::uid://dygh1k5xoxd6w::::res://plank_build.gd<>uid://crj03aqeenifg::::res://area_2d.gd
 plank_physics.tscn::PackedScene::6349182005572798650::1762643871::0::1::::<><><>0<>0<><>::
 README.md::TextFile::-1::1762579009::0::1::::<><><>0<>0<><>::
+level_1_scene.gd::GDScript::4087480633201818644::1762649565::0::1::::<>Node2D<><>0<>0<><>::
+plank_edit.gd::GDScript::4133847223086023784::1762648906::0::1::::<>CharacterBody2D<><>0<>0<><>::
+plank_edit.tscn::PackedScene::2234824490132976595::1762648953::0::1::::<><><>0<>0<><>::uid://by5p4h6v20pn1::::res://plank_edit.gd<>uid://c0l4hhs4abbqd::::res://Texture/Plank.png<>uid://crj03aqeenifg::::res://area_2d.gd
+plank_physics_1.tscn::PackedScene::2694174131885843469::1762649470::0::1::::<><><>0<>0<><>::uid://c0l4hhs4abbqd::::res://Texture/Plank.png
 rigid_body_2d.gd::GDScript::2928569196133660255::1762584870::0::1::::<>RigidBody2D<><>0<>0<><>::
-::res://Backgrounds/::1762644721
+::res://Backgrounds/::1762650794
 Clouds.png::CompressedTexture2D::1597708654724210623::1762644721::1762644721::1::::<><><>0<>0<>a24df4878f894780f39767b6e6ebc164<>res://.godot/imported/Clouds.png-b52f242078e55ee08daeba97a5b281df.ctex::
 Grass Mountains.png::CompressedTexture2D::2068344629555877140::1762644721::1762644721::1::::<><><>0<>0<>ba07329569416eab94f332bae1ae839e<>res://.godot/imported/Grass Mountains.png-a38380862c675cff7ff8a4f0badcf794.ctex::
 Rock Mountains.png::CompressedTexture2D::5536731258458276555::1762644721::1762644721::1::::<><><>0<>0<>a59b569c9a8404d336d0376d67a5ea2e<>res://.godot/imported/Rock Mountains.png-134ed7380344be5ca67ceb1251fc4cef.ctex::
 Sky.png::CompressedTexture2D::1561433563306466857::1762644721::1762644721::1::::<><><>0<>0<>fdc340c7c02857a6e6d1fe3fe9d611dc<>res://.godot/imported/Sky.png-4994ce93f7e88238bff56d78c41e150c.ctex::
-::res://Texture/::1762644721
+::res://Backgrounds/free-villagers-sprite-sheets-pixel-art/::1762650794
+Font.txt::TextFile::-1::1762650794::0::1::::<><><>0<>0<><>::
+License.txt::TextFile::-1::1762650794::0::1::::<><><>0<>0<><>::
+::res://Backgrounds/free-villagers-sprite-sheets-pixel-art/1 Old_man/::1762650794
+Old_man.png::CompressedTexture2D::178064956695158577::1762650794::1762650794::1::::<><><>0<>0<>7fde93e0da0b45ff14bf15755d560c5f<>res://.godot/imported/Old_man.png-7770e395966ba4f40afc70c84204cbca.ctex::
+Old_man_attack.png::CompressedTexture2D::3806386904260653412::1762650794::1762650794::1::::<><><>0<>0<>429d2ab8743d713fded7f514e6d6b08c<>res://.godot/imported/Old_man_attack.png-0930c10f6c4a7da330b2944c4e24891d.ctex::
+Old_man_death.png::CompressedTexture2D::8963873319253848517::1762650794::1762650794::1::::<><><>0<>0<>030cf2a734575c4136097edd39956b31<>res://.godot/imported/Old_man_death.png-8f7ade51242085756513eb7e6316e985.ctex::
+Old_man_hurt.png::CompressedTexture2D::4435757807259089277::1762650794::1762650794::1::::<><><>0<>0<>7a9f9f6cf198d05775fc24ac4089889b<>res://.godot/imported/Old_man_hurt.png-f8a4166d45ef72beb879d5565c82f7fa.ctex::
+Old_man_idle.png::CompressedTexture2D::8818418481608584796::1762650794::1762650794::1::::<><><>0<>0<>13905bae339361c2ed3a226b529a73fc<>res://.godot/imported/Old_man_idle.png-3df66dc9398604449db9442599244cf6.ctex::
+Old_man_walk.png::CompressedTexture2D::8996038125335808022::1762650794::1762650794::1::::<><><>0<>0<>18dac2783612fa72e82787f7157cfd97<>res://.godot/imported/Old_man_walk.png-17b6eda9f6dd35812112c5da67940547.ctex::
+::res://Backgrounds/free-villagers-sprite-sheets-pixel-art/2 Old_woman/::1762650794
+Old_woman.png::CompressedTexture2D::3592587814970841294::1762650794::1762650794::1::::<><><>0<>0<>c0c1f4bab08350545ef41dd4cebb3c2c<>res://.godot/imported/Old_woman.png-c6b7b797a173d94ed3e1aee40240a94c.ctex::
+Old_woman_attack.png::CompressedTexture2D::4412308940668665571::1762650794::1762650794::1::::<><><>0<>0<>58f5f0406412b13d1c64d97389e358fe<>res://.godot/imported/Old_woman_attack.png-0d4cda75aa4996185dcc0a75c4246d93.ctex::
+Old_woman_death.png::CompressedTexture2D::1212795850497982360::1762650794::1762650794::1::::<><><>0<>0<>5e13ff221ee120294603a600001be39e<>res://.godot/imported/Old_woman_death.png-fb492ca5f857179b2c0ba1255231432c.ctex::
+Old_woman_hurt.png::CompressedTexture2D::6694658383821678600::1762650794::1762650794::1::::<><><>0<>0<>d783f17536d30e1ef59e8d08d99c3fda<>res://.godot/imported/Old_woman_hurt.png-c1a825d52df52bfdbc32af848f734bbe.ctex::
+Old_woman_idle.png::CompressedTexture2D::6447636744118148738::1762650794::1762650794::1::::<><><>0<>0<>99123a18d29d8c10c13e81d218602112<>res://.godot/imported/Old_woman_idle.png-ff626038a6e921bfaed85aa5988de680.ctex::
+Old_woman_walk.png::CompressedTexture2D::1650357224335390365::1762650794::1762650794::1::::<><><>0<>0<>cc891cbf849b735b7a3aeb705c49bf41<>res://.godot/imported/Old_woman_walk.png-0c7f94c4bb6a3b105afd527367412f8b.ctex::
+::res://Backgrounds/free-villagers-sprite-sheets-pixel-art/3 Man/::1762650794
+Man.png::CompressedTexture2D::365926508105365574::1762650794::1762650794::1::::<><><>0<>0<>16554fffd972a72c3b4c9224d093c6b5<>res://.godot/imported/Man.png-9aa5fc335544392b9ca112e9843e6a41.ctex::
+Man_attack.png::CompressedTexture2D::2138477744436523376::1762650794::1762650794::1::::<><><>0<>0<>39b889e45d16ebe3b4b265d06d74ff94<>res://.godot/imported/Man_attack.png-758e45d11158f27421fac420d44b6aee.ctex::
+Man_death.png::CompressedTexture2D::8950477566058664991::1762650794::1762650794::1::::<><><>0<>0<>c150714cd1e1a30523017e4a699dbe13<>res://.godot/imported/Man_death.png-f074d8a08c88d205fccbabd2d620f2cc.ctex::
+Man_hurt.png::CompressedTexture2D::8371870077780216802::1762650794::1762650794::1::::<><><>0<>0<>027f3af965399b57f2f9ff7f4bce5f3a<>res://.godot/imported/Man_hurt.png-5e6a0055a4a4a89ff378acdb2e0bc5d3.ctex::
+Man_idle.png::CompressedTexture2D::5273608249088928328::1762650794::1762650794::1::::<><><>0<>0<>17663f62ab5a42f29b39f42e9f84f725<>res://.godot/imported/Man_idle.png-102457d288d67b184928386a59579c8c.ctex::
+Man_walk.png::CompressedTexture2D::7885075732687334657::1762650794::1762650794::1::::<><><>0<>0<>9f9cd008e1793f4aef9e75c2436b8071<>res://.godot/imported/Man_walk.png-c63eba582df915b2db113713c85d4c4d.ctex::
+::res://Backgrounds/free-villagers-sprite-sheets-pixel-art/4 Woman/::1762650794
+Woman.png::CompressedTexture2D::3688418810292735992::1762650794::1762650794::1::::<><><>0<>0<>026a2bbe2872517d256c9c150339d1f5<>res://.godot/imported/Woman.png-e842249c70901acfdad11ff8ae318d72.ctex::
+Woman_attack.png::CompressedTexture2D::8927724135123164371::1762650794::1762650794::1::::<><><>0<>0<>2d2cf92a86db36892756c5726b0b96e0<>res://.godot/imported/Woman_attack.png-ecc062bf4bb1fc0bb4c50ecdee8e7997.ctex::
+Woman_death.png::CompressedTexture2D::5362934568574653407::1762650794::1762650794::1::::<><><>0<>0<>1c547d9a49e36549d38605b83c7cd875<>res://.godot/imported/Woman_death.png-c843602a1f2fc5b7d9c07a8a08db203f.ctex::
+Woman_hurt.png::CompressedTexture2D::6815527816704691298::1762650794::1762650794::1::::<><><>0<>0<>489987e7e3e87b7da8c15fcb15e20053<>res://.godot/imported/Woman_hurt.png-b486afd625309596b0f1f2d80a4edfb2.ctex::
+Woman_idle.png::CompressedTexture2D::8789563542960671336::1762650794::1762650794::1::::<><><>0<>0<>4c11a4e78fd06f613a8dec5864e883cb<>res://.godot/imported/Woman_idle.png-100b8ea0a966a12d36436e234f0c3886.ctex::
+Woman_walk.png::CompressedTexture2D::8173439992876397675::1762650794::1762650794::1::::<><><>0<>0<>1ab6e058bc7c96f170139cb7db0eb160<>res://.godot/imported/Woman_walk.png-c748b34a8e74bdce52987a1aa3a8e406.ctex::
+::res://Backgrounds/free-villagers-sprite-sheets-pixel-art/5 Boy/::1762650794
+Boy.png::CompressedTexture2D::4033139138812725958::1762650794::1762650794::1::::<><><>0<>0<>8c1622c3c149b2bd7ef5bcc42dde2c1f<>res://.godot/imported/Boy.png-70a82472025a0216002a290a1d5651d5.ctex::
+Boy_attack.png::CompressedTexture2D::2442108450784797664::1762650794::1762650794::1::::<><><>0<>0<>5180ed874d5fe052b42840e7285f0a1d<>res://.godot/imported/Boy_attack.png-9fb980042222ffd9555b2ae284977962.ctex::
+Boy_death.png::CompressedTexture2D::8275232209420741847::1762650794::1762650794::1::::<><><>0<>0<>471c9930a0c732604b1414ca0bd67a05<>res://.godot/imported/Boy_death.png-4363b86c1ed57858803cd5e0834c7c73.ctex::
+Boy_hurt.png::CompressedTexture2D::6192963014291982717::1762650794::1762650794::1::::<><><>0<>0<>08af9c403193869d13b700652c6c8fbb<>res://.godot/imported/Boy_hurt.png-23e512c0dda4ccbdc06685a14817b8b7.ctex::
+Boy_idle.png::CompressedTexture2D::6530320823206315036::1762650794::1762650794::1::::<><><>0<>0<>4d3ccdde4c80930f3a8e66e1a2c354c5<>res://.godot/imported/Boy_idle.png-4c3e3f33b1a12415f0f979b4e50ae174.ctex::
+Boy_walk.png::CompressedTexture2D::5966640629381787191::1762650794::1762650794::1::::<><><>0<>0<>0483cff044ae282169bf236954c6f86c<>res://.godot/imported/Boy_walk.png-a7c3f522f5e11b94f5ae5b8494f44b03.ctex::
+::res://Backgrounds/free-villagers-sprite-sheets-pixel-art/6 Girl/::1762650794
+Girl.png::CompressedTexture2D::2042843848429450073::1762650794::1762650794::1::::<><><>0<>0<>d611bc9c938051d366a7bfd2e621e520<>res://.godot/imported/Girl.png-3802c150cbe71171189e12c838732bbf.ctex::
+Girl_attack.png::CompressedTexture2D::7711044920881463868::1762650794::1762650794::1::::<><><>0<>0<>1fe1f66a7496681515091120f4060879<>res://.godot/imported/Girl_attack.png-ddd2905018921d0c79e77586715047b0.ctex::
+Girl_death.png::CompressedTexture2D::4365283322676172072::1762650794::1762650794::1::::<><><>0<>0<>5bdbf590295a4f8434d9b834569e4549<>res://.godot/imported/Girl_death.png-ae687a7f4bb9f22a5b4d67cd6eb127e3.ctex::
+Girl_hurt.png::CompressedTexture2D::4342871694705943700::1762650794::1762650794::1::::<><><>0<>0<>358f26b023278ae3e6fb76286a444702<>res://.godot/imported/Girl_hurt.png-936e3db6b3c901e97bde09aeba1ac2e3.ctex::
+Girl_idle.png::CompressedTexture2D::5195625393304383731::1762650794::1762650794::1::::<><><>0<>0<>f4c6ca3a19929206360ce7c4af34cb3e<>res://.godot/imported/Girl_idle.png-0207364a84d9154ca54a92bc2ca56d62.ctex::
+Girl_walk.png::CompressedTexture2D::7271221763241273845::1762650794::1762650794::1::::<><><>0<>0<>ca14e806270ee553de80e056732b1f4f<>res://.godot/imported/Girl_walk.png-1237bb874b45be25244ad05436d3adb5.ctex::
+::res://free-villagers-sprite-sheets-pixel-art/::1762650766
+Font.txt::TextFile::-1::1578613872::0::1::::<><><>0<>0<><>::
+License.txt::TextFile::-1::1492270136::0::1::::<><><>0<>0<><>::
+::res://free-villagers-sprite-sheets-pixel-art/1 Old_man/::1583386330
+Old_man.png::CompressedTexture2D::3130977491570077113::1580942374::1762650858::1::::<><><>0<>0<>6ba75863e4a5e770132736c91dd9e967<>res://.godot/imported/Old_man.png-3151db971faed1ca3536fe365267aed3.ctex::
+Old_man_attack.png::CompressedTexture2D::7152791629291702192::1580942262::1762650858::1::::<><><>0<>0<>e88a3572cb5909580d6c0fb2576adbfa<>res://.godot/imported/Old_man_attack.png-a48aabde3179137826217a16fd4c6320.ctex::
+Old_man_death.png::CompressedTexture2D::6849232184254446957::1580942286::1762650858::1::::<><><>0<>0<>9ce7acbb2ba2e68130a553751809a6d6<>res://.godot/imported/Old_man_death.png-d6309e69a91604fd5ead8b3a6020620f.ctex::
+Old_man_hurt.png::CompressedTexture2D::2573465252543172933::1580942324::1762650858::1::::<><><>0<>0<>cf89602c133131dc4f968e944d0b83b0<>res://.godot/imported/Old_man_hurt.png-7ac30953e89ab93b0aaa12fa209c4e7a.ctex::
+Old_man_idle.png::CompressedTexture2D::6247805050666468465::1580942304::1762650858::1::::<><><>0<>0<>28d7bc7edafc610f1f7d8a030d5a20aa<>res://.godot/imported/Old_man_idle.png-5951155af3f477d3d68013fcd75ce9e1.ctex::
+Old_man_walk.png::CompressedTexture2D::7044836829820120959::1580942344::1762650858::1::::<><><>0<>0<>a9cc4cbaf5ace1c873fbeef596fa5f5d<>res://.godot/imported/Old_man_walk.png-33a482417a19af248804687d98b922a9.ctex::
+::res://free-villagers-sprite-sheets-pixel-art/2 Old_woman/::1583386330
+Old_woman.png::CompressedTexture2D::3883082977011338437::1580943232::1762650858::1::::<><><>0<>0<>e0b5d33e6620248bc6136b8cab1d5120<>res://.godot/imported/Old_woman.png-a7d464e7a187c041fc904563e51ea1ea.ctex::
+Old_woman_attack.png::CompressedTexture2D::3082784209082166386::1580943092::1762650858::1::::<><><>0<>0<>ead07fe1d5053e1dc2efec1c28f0672d<>res://.godot/imported/Old_woman_attack.png-b34fe0a22f44ad93e62290c2c8d58321.ctex::
+Old_woman_death.png::CompressedTexture2D::5829625396403585962::1580943114::1762650858::1::::<><><>0<>0<>538f056660e8879af041c28265cba874<>res://.godot/imported/Old_woman_death.png-e61caa7a5031e27881f1cd4adca6ce18.ctex::
+Old_woman_hurt.png::CompressedTexture2D::7949238793495574259::1580943150::1762650858::1::::<><><>0<>0<>de804a9121d9ad7d1f2bd4ad63f5e143<>res://.godot/imported/Old_woman_hurt.png-60ec1052564dba84f985a2d7be7a1d50.ctex::
+Old_woman_idle.png::CompressedTexture2D::7475682160468456126::1580943132::1762650858::1::::<><><>0<>0<>7bc40919ae3c08f71283131d40855fb8<>res://.godot/imported/Old_woman_idle.png-c0e7bd52f3bdd36abf6e7b3e5181ec85.ctex::
+Old_woman_walk.png::CompressedTexture2D::7490681817207783118::1580943176::1762650858::1::::<><><>0<>0<>33061ad52b3a9547dbaa36de33eb9cd8<>res://.godot/imported/Old_woman_walk.png-498b8ad376ce8cf74d67e71f78133c92.ctex::
+::res://free-villagers-sprite-sheets-pixel-art/3 Man/::1583386330
+Man.png::CompressedTexture2D::7818296443853423063::1580950038::1762650858::1::::<><><>0<>0<>62edcc2accc6c52b0eb6aac6274a0357<>res://.godot/imported/Man.png-afd9d2afc1357600f46544623be92bfe.ctex::
+Man_attack.png::CompressedTexture2D::142309058751356092::1580949944::1762650858::1::::<><><>0<>0<>04b568f1ca31b743f5b3fe81828c8488<>res://.godot/imported/Man_attack.png-29ea846550c34bbc63cc5ae38742fdcd.ctex::
+Man_death.png::CompressedTexture2D::7466043554093142962::1580949962::1762650858::1::::<><><>0<>0<>a5dc1964928847bf2bafa06687d96f8a<>res://.godot/imported/Man_death.png-3a90ee8e3fdfd802749cc1bd35af8e6d.ctex::
+Man_hurt.png::CompressedTexture2D::4346686873897678910::1580950018::1762650858::1::::<><><>0<>0<>524984e597de17c886f9cdb0f52c2ea6<>res://.godot/imported/Man_hurt.png-bfe7b230824039038bfdf768e5ac9485.ctex::
+Man_idle.png::CompressedTexture2D::2722527426855391457::1580949976::1762650858::1::::<><><>0<>0<>866b92934e654813e5abaa8889321136<>res://.godot/imported/Man_idle.png-31c5ab67328381400d0dcd2ab7f230ac.ctex::
+Man_walk.png::CompressedTexture2D::6002524724525887535::1580950000::1762650858::1::::<><><>0<>0<>618495a758afe21a31815c65d7eec912<>res://.godot/imported/Man_walk.png-5251b6629c1da09c85019e54fd14f4d7.ctex::
+::res://free-villagers-sprite-sheets-pixel-art/4 Woman/::1583386330
+Woman.png::CompressedTexture2D::775317059302647162::1580950862::1762650858::1::::<><><>0<>0<>9dc676a9a7827c18cafc7998406fc9e1<>res://.godot/imported/Woman.png-a4754a2bd1e2962afc9f7d41f257a3b8.ctex::
+Woman_attack.png::CompressedTexture2D::3541464525458940589::1580950766::1762650858::1::::<><><>0<>0<>48e0f97f2d7f5b65882406c9660a43e1<>res://.godot/imported/Woman_attack.png-1d680b171618873bf0888c141b841c35.ctex::
+Woman_death.png::CompressedTexture2D::2704597500986045532::1580950780::1762650858::1::::<><><>0<>0<>8efd862bbf994a87aea91fb2e4f76a40<>res://.godot/imported/Woman_death.png-b27c6bda5b27ed8c1fdae3961c21d59c.ctex::
+Woman_hurt.png::CompressedTexture2D::3990769539690294661::1580950840::1762650858::1::::<><><>0<>0<>af866fafd1be9580d4b712c39344ff55<>res://.godot/imported/Woman_hurt.png-d6370196bdc2ce10fb16f3360c4aefb9.ctex::
+Woman_idle.png::CompressedTexture2D::4638290757024575755::1580950800::1762650858::1::::<><><>0<>0<>35cf8daea3c2aa5a0207f78026ea0442<>res://.godot/imported/Woman_idle.png-1136b7b653690b6235a9f6418dfbba98.ctex::
+Woman_walk.png::CompressedTexture2D::7089099345218544346::1580950818::1762650858::1::::<><><>0<>0<>cad690a1f427b22b74ac553671600893<>res://.godot/imported/Woman_walk.png-01cfaeb9bf613ca9010ee8d4f9166621.ctex::
+::res://free-villagers-sprite-sheets-pixel-art/5 Boy/::1583386330
+Boy.png::CompressedTexture2D::4205626854073873502::1580948254::1762650858::1::::<><><>0<>0<>876648991a0967c61e2f6ae7dfe90361<>res://.godot/imported/Boy.png-98ac12280d083caf829de7016ed3448b.ctex::
+Boy_attack.png::CompressedTexture2D::2381287996589343373::1580948152::1762650858::1::::<><><>0<>0<>c5c6bf9242330f7450261b30f7b2b905<>res://.godot/imported/Boy_attack.png-51c239b70daf3c5fa78144044d38f90b.ctex::
+Boy_death.png::CompressedTexture2D::6391789912186308367::1580948168::1762650858::1::::<><><>0<>0<>d7863d0922b779a49c83e9d08436d675<>res://.godot/imported/Boy_death.png-ecc7809163f22dc37d340b45a08441ea.ctex::
+Boy_hurt.png::CompressedTexture2D::2027596561839133804::1580948232::1762650858::1::::<><><>0<>0<>2ff9eca212e05f2d94cdfa37636c99ff<>res://.godot/imported/Boy_hurt.png-d5a863bd7ce00efe155de06a3977ea02.ctex::
+Boy_idle.png::CompressedTexture2D::8102993949888458776::1580948184::1762650858::1::::<><><>0<>0<>01c12c25f502c413eab687b8cfbe8edd<>res://.godot/imported/Boy_idle.png-fd91ebea017c835014b438ecf9dd3847.ctex::
+Boy_walk.png::CompressedTexture2D::4255584756680504100::1580948204::1762650858::1::::<><><>0<>0<>32535238436441c359e9207214959139<>res://.godot/imported/Boy_walk.png-ff3faf93dc9b1e546d6d538d8db3f26f.ctex::
+::res://free-villagers-sprite-sheets-pixel-art/6 Girl/::1583386330
+Girl.png::CompressedTexture2D::590314396743607124::1580949086::1762650858::1::::<><><>0<>0<>28a788cbfc3abcdc87db7962ff714958<>res://.godot/imported/Girl.png-73de5a0a9dca56da2b3fdfd53e58afd4.ctex::
+Girl_attack.png::CompressedTexture2D::3342083534175918608::1580948964::1762650858::1::::<><><>0<>0<>8745b184f1fd49336a353cdf68adb8fd<>res://.godot/imported/Girl_attack.png-856921cff5cc655cd052f75e467c98fd.ctex::
+Girl_death.png::CompressedTexture2D::7898974141830393170::1580948980::1762650858::1::::<><><>0<>0<>29414003b50afc16297c0ee7bef61c77<>res://.godot/imported/Girl_death.png-771055ccce83d7f82377e4870fe26f38.ctex::
+Girl_hurt.png::CompressedTexture2D::7660430257502512009::1580949064::1762650858::1::::<><><>0<>0<>e9983d27dab72bc4749441ddf6b6feee<>res://.godot/imported/Girl_hurt.png-34b4511808fcd7b762decbc1dcbfc0fc.ctex::
+Girl_idle.png::CompressedTexture2D::7213074647024850145::1580949002::1762650858::1::::<><><>0<>0<>8447f470583114ad67ab7ffedfebe698<>res://.godot/imported/Girl_idle.png-f8826de612fbeea82234e6641dac3e81.ctex::
+Girl_walk.png::CompressedTexture2D::8143982591687563518::1580949036::1762650858::1::::<><><>0<>0<>724ca55a7251c2977178d7bdb1edd8ed<>res://.godot/imported/Girl_walk.png-7aca49dfd153fa772521c2655ec70dfa.ctex::
+::res://Texture/::1762648075
+Plank.png::CompressedTexture2D::6552044303766829775::1762648075::1762648075::1::::<><><>0<>0<>1f3a0527ef50f47c53bfc726940f2238<>res://.godot/imported/Plank.png-d13811eb63649446e8c45abc007ab177.ctex::
 TX Chest Animation.png::CompressedTexture2D::4340417751614451098::1762644721::1762644721::1::::<><><>0<>0<>cdd0474c91d4ece74385472648450cf6<>res://.godot/imported/TX Chest Animation.png-e842fba40aff9e192c293c1575666d34.ctex::
 TX FX Flame.png::CompressedTexture2D::3497577330328837105::1762644721::1762644721::1::::<><><>0<>0<>d649cb26748f2f942cec1298e1c1730c<>res://.godot/imported/TX FX Flame.png-80d15c79101d825f142cfc9a8dd71151.ctex::
 TX FX Torch Flame.png::CompressedTexture2D::5280800884539901210::1762644721::1762644721::1::::<><><>0<>0<>387a33bb78a86048f09bb2ba8d5cd652<>res://.godot/imported/TX FX Torch Flame.png-3f0823327d6ab4c4c9211962981da03b.ctex::

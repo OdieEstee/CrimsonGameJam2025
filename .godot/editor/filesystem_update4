@@ -1,1 +1,7 @@
 res://level_1_scene.tscn
+res://level_1_scene.gd
+res://plank_edit.gd
+res://plank_edit.tscn
+res://character_body_2d.gd
+res://Level 0.tscn
+res://plank_physics_1.tscn
