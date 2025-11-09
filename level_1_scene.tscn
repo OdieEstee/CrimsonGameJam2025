@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=4 uid="uid://ba7opnqyud8mq"]
+[gd_scene load_steps=50 format=4 uid="uid://ba7opnqyud8mq"]
 
 [ext_resource type="Script" uid="uid://byiahdoi86m0k" path="res://level_1_scene.gd" id="1_k7365"]
 [ext_resource type="Texture2D" uid="uid://bt768615tgd0" path="res://Texture/TX Village Props.png" id="1_ws576"]
@@ -11,9 +11,19 @@
 [ext_resource type="Script" uid="uid://cs1d4w4bk0jo3" path="res://character_body_2d.gd" id="8_k7365"]
 [ext_resource type="PackedScene" uid="uid://63th6ftg6nx0" path="res://plank_edit.tscn" id="9_1g6xj"]
 [ext_resource type="PackedScene" uid="uid://bencwinyt78er" path="res://plank_physics_1.tscn" id="10_e5qob"]
+[ext_resource type="Texture2D" uid="uid://dnpfha34p527y" path="res://Texture/PlankIcon.png" id="10_pnupd"]
 [ext_resource type="Texture2D" uid="uid://da1cjye7l2agn" path="res://free-villagers-sprite-sheets-pixel-art/6 Girl/Girl_idle.png" id="12_3rc6u"]
 [ext_resource type="Texture2D" uid="uid://dobag6f1v15sc" path="res://free-villagers-sprite-sheets-pixel-art/6 Girl/Girl_walk.png" id="13_80rtw"]
 [ext_resource type="PackedScene" uid="uid://de58xkfxf4cer" path="res://Pause Menu.tscn" id="14_80rtw"]
+[ext_resource type="Script" uid="uid://c1kvtwu4rta3d" path="res://chest.gd" id="15_buavi"]
+[ext_resource type="Texture2D" uid="uid://gnwcx6rkkr2k" path="res://Texture/Chest6.png" id="16_pnupd"]
+[ext_resource type="Texture2D" uid="uid://memmb2a3c8gk" path="res://Texture/Chest7.png" id="17_h7a1x"]
+[ext_resource type="Texture2D" uid="uid://dovwl3kxuc8gy" path="res://Texture/Chest5.png" id="18_7bgaa"]
+[ext_resource type="Texture2D" uid="uid://ddctl3r446i22" path="res://Texture/Chest4.png" id="19_7dsvg"]
+[ext_resource type="Texture2D" uid="uid://dp8kiiwwyrq38" path="res://Texture/Chest3.png" id="20_7m1ho"]
+[ext_resource type="Texture2D" uid="uid://6r57sd268vh7" path="res://Texture/Chest2.png" id="21_u7nxx"]
+[ext_resource type="Texture2D" uid="uid://umc73tpyhtsv" path="res://Texture/Chest1.png" id="22_4p0ek"]
+[ext_resource type="Script" uid="uid://cetw5o470fdqk" path="res://placement_area.gd" id="24_h7a1x"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_80rtw"]
 texture = ExtResource("1_ws576")
@@ -1769,6 +1779,49 @@ animations = [{
 radius = 4.0
 height = 22.0
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_3v3po"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("16_pnupd")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("16_pnupd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_h7a1x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_7bgaa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_7dsvg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_7m1ho")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_u7nxx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_4p0ek")
+}],
+"loop": true,
+"name": &"open",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_slaw5"]
+size = Vector2(18, 14)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7bgaa"]
+size = Vector2(156, 73)
+
 [node name="Level1_Scene" type="Node2D"]
 script = ExtResource("1_k7365")
 
@@ -1803,11 +1856,11 @@ zoom = Vector2(3, 3)
 position = Vector2(44, 21)
 
 [node name="PlankButton" type="Button" parent="."]
-offset_left = 320.0
-offset_top = -220.0
+offset_left = 306.0
+offset_top = -210.0
 offset_right = 380.0
-offset_bottom = -189.0
-text = "PLANK"
+offset_bottom = -195.0
+icon = ExtResource("10_pnupd")
 
 [node name="EditSpawnParent" type="Node2D" parent="."]
 position = Vector2(-1, 20)
@@ -1822,6 +1875,8 @@ text = "PLAY"
 
 [node name="PlankPhysics1" parent="." instance=ExtResource("10_e5qob")]
 position = Vector2(121, 21)
+gravity_scale = 0.1
+linear_damp = 100.0
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
 position = Vector2(26, -88)
@@ -1843,5 +1898,50 @@ offset_top = -77.0
 offset_right = 83.0
 offset_bottom = -77.0
 
+[node name="Chest" type="Area2D" parent="."]
+position = Vector2(337, -59)
+script = ExtResource("15_buavi")
+next_scene = "uid://qmn227ik1xws"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Chest"]
+position = Vector2(0, -4)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_3v3po")
+animation = &"open"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Chest"]
+position = Vector2(0, -11)
+shape = SubResource("RectangleShape2D_slaw5")
+
+[node name="MaterialsLabel" type="Label" parent="."]
+offset_left = 5.0
+offset_top = -210.0
+offset_right = 31.0
+offset_bottom = -187.0
+
+[node name="Label" type="Label" parent="."]
+offset_left = 276.0
+offset_top = -214.0
+offset_right = 316.0
+offset_bottom = -191.0
+text = "100"
+
+[node name="PlacementArea" type="Area2D" parent="."]
+position = Vector2(193, -106)
+script = ExtResource("24_h7a1x")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlacementArea"]
+position = Vector2(-3, -3)
+shape = SubResource("RectangleShape2D_7bgaa")
+
+[node name="ResetButton" type="Button" parent="."]
+visible = false
+offset_left = 165.0
+offset_top = -31.0
+offset_right = 219.0
+text = "RESET"
+
 [connection signal="pressed" from="PlankButton" to="." method="_on_plank_button_pressed"]
 [connection signal="pressed" from="PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="body_entered" from="Chest" to="Chest" method="_on_body_entered"]
+[connection signal="pressed" from="ResetButton" to="." method="_on_reset_button_pressed"]
