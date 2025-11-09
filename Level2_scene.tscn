@@ -2082,7 +2082,7 @@ offset_bottom = -77.0
 [node name="Chest" type="Area2D" parent="."]
 position = Vector2(363, -91)
 script = ExtResource("17_hsrpj")
-next_scene = "uid://qmn227ik1xws"
+next_scene = "uid://bxld3xiuqf1mn"
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Chest"]
 position = Vector2(0, -4)
