@@ -1690,6 +1690,7 @@ sources/7 = SubResource("TileSetAtlasSource_xn04g")
 sources/8 = SubResource("TileSetAtlasSource_ptoke")
 
 [node name="Level2Scene" type="Node2D"]
+metadata/_edit_horizontal_guides_ = [-360.0]
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_c5g6b")
