@@ -1,10 +1,11 @@
-[gd_scene load_steps=13 format=3 uid="uid://c3r3wnkluh7ig"]
+[gd_scene load_steps=9 format=3 uid="uid://c3r3wnkluh7ig"]
 
 [ext_resource type="Script" uid="uid://diw6fis34kuwk" path="res://level_0.gd" id="1_0cwry"]
 [ext_resource type="Texture2D" uid="uid://dgv71lbgp8xem" path="res://icon.svg" id="1_c8imh"]
 [ext_resource type="Script" uid="uid://cs1d4w4bk0jo3" path="res://character_body_2d.gd" id="2_avkrb"]
 [ext_resource type="Script" uid="uid://ch8rud4n11l1s" path="res://archer.gd" id="4_ghhfo"]
 [ext_resource type="Script" uid="uid://d3gv0aw6wfyiv" path="res://soldier.gd" id="5_gkrj2"]
+[ext_resource type="PackedScene" uid="uid://de58xkfxf4cer" path="res://Pause Menu.tscn" id="4_ghhfo"]
 
 [sub_resource type="Gradient" id="Gradient_c8imh"]
 colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 1)
@@ -149,6 +150,12 @@ visibility_layer = 3
 position = Vector2(-2.543396, -40.984474)
 scale = Vector2(0.25713435, 0.9221176)
 texture = ExtResource("1_c8imh")
+[node name="PAUSE" parent="." instance=ExtResource("4_ghhfo")]
+z_index = 15
+offset_left = 30.0
+offset_top = -238.0
+offset_right = 30.0
+offset_bottom = -238.0
 
 [connection signal="pressed" from="Control/Button" to="." method="_on_button_pressed"]
 [connection signal="timeout" from="Archer/Timer" to="Archer" method="_on_timer_timeout"]

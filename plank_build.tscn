@@ -1,0 +1,26 @@
+[gd_scene load_steps=6 format=3 uid="uid://4nwp58uqth58"]
+
+[ext_resource type="Script" uid="uid://dygh1k5xoxd6w" path="res://plank_build.gd" id="1_any1h"]
+[ext_resource type="Script" uid="uid://crj03aqeenifg" path="res://area_2d.gd" id="1_x2ttc"]
+
+[sub_resource type="Gradient" id="Gradient_gkrj2"]
+colors = PackedColorArray(0.5781732, 0.297935, 0.20280138, 1, 0.5764706, 0.29803923, 0.20392157, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_jxxqn"]
+gradient = SubResource("Gradient_gkrj2")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ghhfo"]
+size = Vector2(398, 32)
+
+[node name="PlankBuild" type="CharacterBody2D"]
+script = ExtResource("1_any1h")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(6.234375, 0.5)
+texture = SubResource("GradientTexture2D_jxxqn")
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("1_x2ttc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_ghhfo")

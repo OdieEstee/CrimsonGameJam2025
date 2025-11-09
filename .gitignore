@@ -1,22 +1,9 @@
-# Godot 4+ specific ignores
-.godot/editor/
-.godot/shader_cache/
-.godot/uid_cache.bin
-.godot/imported/
-.nomedia
-
-# Godot-specific
+.godot/
 .import/
-export.cfg
-export_credentials.cfg
-*.tmp
-*.translation
-
-# Mono
-.mono/
-data_*/
-mono_crash.*.json
-
-# OS
 .DS_Store
-Thumbs.db
+.godot/
+.import/
+.DS_Store
+.godot/
+.import/
+.DS_Store

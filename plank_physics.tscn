@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://cwpudnut4hbgc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ghhfo"]
+size = Vector2(398, 32)
+
+[sub_resource type="Gradient" id="Gradient_gkrj2"]
+colors = PackedColorArray(0.5781732, 0.297935, 0.20280138, 1, 0.5764706, 0.29803923, 0.20392157, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_gkrj2"]
+gradient = SubResource("Gradient_gkrj2")
+
+[node name="PlankPhysics" type="RigidBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_ghhfo")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(6.234375, 0.5)
+texture = SubResource("GradientTexture2D_gkrj2")
