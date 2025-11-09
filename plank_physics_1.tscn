@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://bencwinyt78er"]
+
+[ext_resource type="Texture2D" uid="uid://c0l4hhs4abbqd" path="res://Texture/Plank.png" id="1_1e1g6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t4ofn"]
+size = Vector2(74, 9)
+
+[node name="PlankPhysics1" type="RigidBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+rotation = -1.5707964
+scale = Vector2(1.1, 1.1)
+texture = ExtResource("1_1e1g6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_t4ofn")
