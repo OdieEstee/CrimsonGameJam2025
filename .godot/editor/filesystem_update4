@@ -1,4 +1,6 @@
+res://Pause Menu.tscn
+res://pause.gd
 res://Level 0.tscn
 res://level_0.gd
+res://pause_menu.gd
 res://rigid_body_2d.gd
-res://character_body_2d.gd

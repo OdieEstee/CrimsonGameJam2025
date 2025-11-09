@@ -1,8 +1,12 @@
+Button
+VBoxContainer
+MarginContainer
+ColorRect
+Control
+CanvasLayer
 CollisionShape2D
 Sprite2D
 CharacterBody2D
-Button
-Control
 StaticBody2D
 RigidBody2D
 Camera2D
