@@ -1,10 +1,11 @@
-[gd_scene load_steps=10 format=3 uid="uid://c3r3wnkluh7ig"]
+[gd_scene load_steps=9 format=3 uid="uid://c3r3wnkluh7ig"]
 
 [ext_resource type="Script" uid="uid://diw6fis34kuwk" path="res://level_0.gd" id="1_0cwry"]
 [ext_resource type="Texture2D" uid="uid://dgv71lbgp8xem" path="res://icon.svg" id="1_c8imh"]
 [ext_resource type="Script" uid="uid://cs1d4w4bk0jo3" path="res://character_body_2d.gd" id="2_avkrb"]
-[ext_resource type="PackedScene" uid="uid://4nwp58uqth58" path="res://plank_build.tscn" id="4_ghhfo"]
-[ext_resource type="PackedScene" uid="uid://cwpudnut4hbgc" path="res://plank_physics.tscn" id="5_gkrj2"]
+[ext_resource type="Script" uid="uid://ch8rud4n11l1s" path="res://archer.gd" id="4_ghhfo"]
+[ext_resource type="Script" uid="uid://d3gv0aw6wfyiv" path="res://soldier.gd" id="5_gkrj2"]
+[ext_resource type="PackedScene" uid="uid://de58xkfxf4cer" path="res://Pause Menu.tscn" id="4_ghhfo"]
 
 [sub_resource type="Gradient" id="Gradient_c8imh"]
 colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 1)
@@ -18,20 +19,32 @@ size = Vector2(722, 64)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0cwry"]
 size = Vector2(127, 128)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ghhfo"]
+size = Vector2(132, 132)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jxxqn"]
+size = Vector2(140, 125)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gkrj2"]
+size = Vector2(66, 121)
+
 [node name="Level0" type="Node2D"]
 script = ExtResource("1_0cwry")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
-position = Vector2(-481, 99)
+[node name="Ground" type="StaticBody2D" parent="."]
+position = Vector2(-451.00003, 99)
+scale = Vector2(1.3425826, 1)
+collision_layer = 4
+collision_mask = 15
 
-[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+[node name="Sprite2D" type="Sprite2D" parent="Ground"]
 position = Vector2(264.5, 0)
 scale = Vector2(11.234375, 1)
 texture = SubResource("GradientTexture2D_0cwry")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground"]
 position = Vector2(266, 0)
 shape = SubResource("RectangleShape2D_avkrb")
 
@@ -40,17 +53,24 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+metadata/_edit_use_anchors_ = true
 
 [node name="Button" type="Button" parent="Control"]
-layout_mode = 0
-offset_left = -166.0
-offset_top = 144.0
-offset_right = 172.0
-offset_bottom = 318.0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 4.875
+anchor_top = -4.75
+anchor_right = 5.85
+anchor_bottom = -4.175
+offset_right = 8.0
+offset_bottom = 8.0
 text = "PLAY"
+metadata/_edit_use_anchors_ = true
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
-position = Vector2(-492, -15)
+position = Vector2(-472, -5)
+collision_layer = 2
+collision_mask = 12
 script = ExtResource("2_avkrb")
 
 [node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
@@ -62,29 +82,81 @@ shape = SubResource("RectangleShape2D_0cwry")
 [node name="Icon" type="Sprite2D" parent="CharacterBody2D"]
 texture = ExtResource("1_c8imh")
 
-[node name="Object Menu" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="Archer" type="CharacterBody2D" parent="."]
+position = Vector2(-66, -187)
+collision_mask = 4
+script = ExtResource("4_ghhfo")
+player_path = NodePath("../CharacterBody2D")
+shoot_cd = 1.5
 
-[node name="ObjectButton" type="Button" parent="Object Menu"]
-layout_mode = 0
-offset_left = 483.0
-offset_top = -294.0
-offset_right = 543.0
-offset_bottom = -263.0
-text = "PLANK"
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Archer"]
+shape = SubResource("RectangleShape2D_ghhfo")
 
-[node name="SpawnParent" type="Node2D" parent="."]
+[node name="Icon2" type="Sprite2D" parent="Archer"]
+texture = ExtResource("1_c8imh")
+flip_v = true
 
-[node name="PlankBuild" parent="." instance=ExtResource("4_ghhfo")]
-position = Vector2(-9, 577)
+[node name="ArrowSpawn" type="Marker2D" parent="Archer"]
 
-[node name="PlankPhysics" parent="." instance=ExtResource("5_gkrj2")]
-position = Vector2(-7, 617)
+[node name="Timer" type="Timer" parent="Archer"]
 
-[node name="PhysicsSpawnParent" type="Node2D" parent="."]
+[node name="Pillar" type="StaticBody2D" parent="."]
+position = Vector2(-134.99994, -25.000015)
+scale = Vector2(0.25922254, -2.825225)
+collision_layer = 4
+collision_mask = 15
+
+[node name="Sprite2D" type="Sprite2D" parent="Pillar"]
+position = Vector2(264.5, 0)
+scale = Vector2(11.234375, 1)
+texture = SubResource("GradientTexture2D_0cwry")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pillar"]
+position = Vector2(266, 0)
+shape = SubResource("RectangleShape2D_avkrb")
+
+[node name="Soldier" type="CharacterBody2D" parent="."]
+position = Vector2(-314, -1)
+collision_mask = 4
+script = ExtResource("5_gkrj2")
+player_path = NodePath("../CharacterBody2D")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Soldier"]
+position = Vector2(0, -0.2035141)
+shape = SubResource("RectangleShape2D_jxxqn")
+
+[node name="Icon2" type="Sprite2D" parent="Soldier"]
+position = Vector2(4.7683716e-07, 0.2964859)
+scale = Vector2(1.0520188, 0.9577576)
+texture = ExtResource("1_c8imh")
+flip_v = true
+
+[node name="Timer" type="Timer" parent="Soldier"]
+
+[node name="SwordPivot" type="Node2D" parent="Soldier"]
+position = Vector2(-70, 9.296486)
+
+[node name="Sword" type="Area2D" parent="Soldier/SwordPivot"]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Soldier/SwordPivot/Sword"]
+position = Vector2(-2.543396, -39.484474)
+scale = Vector2(0.5769231, 1)
+shape = SubResource("RectangleShape2D_gkrj2")
+
+[node name="Sprite2D" type="Sprite2D" parent="Soldier/SwordPivot/Sword"]
+modulate = Color(0.1148968, 0.11489681, 0.1148968, 1)
+visibility_layer = 3
+position = Vector2(-2.543396, -40.984474)
+scale = Vector2(0.25713435, 0.9221176)
+texture = ExtResource("1_c8imh")
+[node name="PAUSE" parent="." instance=ExtResource("4_ghhfo")]
+z_index = 15
+offset_left = 30.0
+offset_top = -238.0
+offset_right = 30.0
+offset_bottom = -238.0
 
 [connection signal="pressed" from="Control/Button" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="Object Menu/ObjectButton" to="." method="_on_object_button_pressed"]
+[connection signal="timeout" from="Archer/Timer" to="Archer" method="_on_timer_timeout"]
+[connection signal="timeout" from="Soldier/Timer" to="Soldier" method="_on_timer_timeout"]
