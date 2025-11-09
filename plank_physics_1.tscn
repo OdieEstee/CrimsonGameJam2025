@@ -6,6 +6,7 @@
 size = Vector2(74, 9)
 
 [node name="PlankPhysics1" type="RigidBody2D"]
+gravity_scale = 0.4
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 rotation = -1.5707964

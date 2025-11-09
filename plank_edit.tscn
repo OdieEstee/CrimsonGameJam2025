@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://63th6ftg6nx0"]
 
 [ext_resource type="Script" uid="uid://by5p4h6v20pn1" path="res://plank_edit.gd" id="1_hqdf6"]
-[ext_resource type="Texture2D" uid="uid://c0l4hhs4abbqd" path="res://Texture/Plank.png" id="2_c62nk"]
+[ext_resource type="Texture2D" uid="uid://dnpfha34p527y" path="res://Texture/PlankIcon.png" id="2_hqdf6"]
 [ext_resource type="Script" uid="uid://crj03aqeenifg" path="res://area_2d.gd" id="3_q42my"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hqdf6"]
@@ -11,9 +11,8 @@ size = Vector2(74, 9)
 script = ExtResource("1_hqdf6")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-rotation = 4.712389
 scale = Vector2(1.1, 1.1)
-texture = ExtResource("2_c62nk")
+texture = ExtResource("2_hqdf6")
 
 [node name="Area2D" type="Area2D" parent="."]
 script = ExtResource("3_q42my")
