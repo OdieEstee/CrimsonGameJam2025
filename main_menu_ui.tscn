@@ -1,0 +1,109 @@
+[gd_scene load_steps=3 format=3 uid="uid://bdaoc76ycy75l"]
+
+[ext_resource type="Script" uid="uid://cgybfl0ewf2lr" path="res://main_menu_ui.gd" id="1_5p3a5"]
+[ext_resource type="Theme" uid="uid://c5ssoldm0q78g" path="res://MainMenuUITheme.tres" id="2_0evo5"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -8.0
+offset_top = -11.0
+offset_right = -8.0
+offset_bottom = -11.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_5p3a5")
+
+[node name="Play" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.3611111
+anchor_top = 0.41011113
+anchor_right = 0.65763897
+anchor_bottom = 0.50618863
+offset_top = 0.24798584
+offset_right = 0.39996338
+offset_bottom = -0.010223389
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_0evo5")
+theme_override_font_sizes/font_size = 35
+text = "Play"
+metadata/_edit_use_anchors_ = true
+
+[node name="Level Select" type="Button" parent="Play"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 1.3951613
+anchor_right = 1.0000001
+anchor_bottom = 2.185484
+offset_top = -6.5
+offset_bottom = 6.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 32
+text = "Level Select
+"
+metadata/_edit_use_anchors_ = true
+
+[node name="Exit" type="Button" parent="Play/Level Select"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.006916175
+anchor_top = 1.2739435
+anchor_right = 1.0001931
+anchor_bottom = 2.2738545
+offset_left = 2.3653226
+offset_top = 0.01550293
+offset_right = -0.06607056
+offset_bottom = 0.021026611
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 35
+text = "Exit"
+metadata/_edit_use_anchors_ = true
+
+[node name="Credits" type="Button" parent="Play/Level Select/Exit"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.008742714
+anchor_top = 1.2354249
+anchor_right = 1.000285
+anchor_bottom = 2.2449963
+offset_top = 0.24798584
+offset_bottom = 0.11193848
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 35
+text = "Credits
+"
+metadata/_edit_use_anchors_ = true
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.13305904
+anchor_top = 0.08796296
+anchor_right = 0.89905906
+anchor_bottom = 0.29896298
+offset_left = -0.28401184
+offset_right = 0.28399658
+offset_bottom = 0.27198792
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.72156864, 0.4509804, 0.2, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 100
+text = "Peseant Simulator"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Play" to="Play/Level Select/Exit/Credits" method="_on_play_pressed"]
+[connection signal="pressed" from="Play/Level Select" to="." method="_on_level_select_pressed"]
+[connection signal="pressed" from="Play/Level Select/Exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="Play/Level Select/Exit" to="Play/Level Select/Exit" method="_on_pressed"]
+[connection signal="pressed" from="Play/Level Select/Exit/Credits" to="." method="_on_credits_pressed"]
+[connection signal="pressed" from="Play/Level Select/Exit/Credits" to="Play/Level Select/Exit/Credits" method="_on_pressed"]
