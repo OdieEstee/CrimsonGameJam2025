@@ -88,5 +88,5 @@ func _input(event):
 			for obj in edit_spawn_parent.get_children():
 				if obj.mouse_over:
 					obj.queue_free()
-					if obj.name == "PlankEdit":
+					if obj.type == "Plank":
 						materials += plank_cost

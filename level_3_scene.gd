@@ -46,13 +46,13 @@ func _on_play_button_pressed() -> void:
 		$PlayButton.visible = false
 		for obj in edit_spawn_parent.get_children():
 			obj.visible = false
-			if obj.name == "PlankEdit":
+			if obj.type == "Plank":
 				var plank_physics_instance = plank_physics_scene.instantiate()
 				plank_physics_instance.position = obj.position
 				plank_physics_instance.position.y += 20
 				plank_physics_instance.position.x -= 1
 				physics_spawn_parent.add_child(plank_physics_instance)
-			if obj.name == "StoneEdit":
+			if obj.type == "Stone":
 				var stone_physics_instance = stone_physics_scene.instantiate()
 				stone_physics_instance.position = obj.position
 				stone_physics_instance.position.y += 20
@@ -102,9 +102,9 @@ func _input(event):
 			for obj in edit_spawn_parent.get_children():
 				if obj.mouse_over:
 					obj.queue_free()
-					if obj.name == "PlankEdit":
+					if obj.type == "Plank":
 						materials += plank_cost
-					if obj.name == "StoneEdit":
+					if obj.type == "Stone":
 						materials += stone_cost
 
 
