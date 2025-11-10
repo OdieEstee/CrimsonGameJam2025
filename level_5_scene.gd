@@ -144,6 +144,7 @@ func _on_reset_button_pressed() -> void:
 	$MaterialsLabel.visible = true
 	$PlankButton.visible = true
 	$StoneButton.visible = true
+	$LongPlankButton.visible = true
 	for obj in physics_spawn_parent.get_children():
 		obj.queue_free()
 	for obj in edit_spawn_parent.get_children():

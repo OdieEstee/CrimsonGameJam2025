@@ -14,7 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://da1cjye7l2agn" path="res://free-villagers-sprite-sheets-pixel-art/6 Girl/Girl_idle.png" id="12_xmb3d"]
 [ext_resource type="Texture2D" uid="uid://dobag6f1v15sc" path="res://free-villagers-sprite-sheets-pixel-art/6 Girl/Girl_walk.png" id="13_ug4ca"]
 [ext_resource type="PackedScene" uid="uid://de58xkfxf4cer" path="res://Pause Menu.tscn" id="14_uqrs5"]
-[ext_resource type="Script" uid="uid://c1kvtwu4rta3d" path="res://chest.gd" id="15_yappv"]
+[ext_resource type="Script" path="res://chest.gd" id="15_yappv"]
 [ext_resource type="Texture2D" uid="uid://gnwcx6rkkr2k" path="res://Texture/Chest6.png" id="16_otk3i"]
 [ext_resource type="Texture2D" uid="uid://memmb2a3c8gk" path="res://Texture/Chest7.png" id="17_ygalv"]
 [ext_resource type="Texture2D" uid="uid://dovwl3kxuc8gy" path="res://Texture/Chest5.png" id="18_1bs1o"]
@@ -22,7 +22,7 @@
 [ext_resource type="Texture2D" uid="uid://dp8kiiwwyrq38" path="res://Texture/Chest3.png" id="20_sipqi"]
 [ext_resource type="Texture2D" uid="uid://6r57sd268vh7" path="res://Texture/Chest2.png" id="21_o6j57"]
 [ext_resource type="Texture2D" uid="uid://umc73tpyhtsv" path="res://Texture/Chest1.png" id="22_vqdx8"]
-[ext_resource type="Script" uid="uid://cetw5o470fdqk" path="res://placement_area.gd" id="23_6njhy"]
+[ext_resource type="Script" path="res://placement_area.gd" id="23_6njhy"]
 [ext_resource type="PackedScene" uid="uid://dpaxpn8y43xr1" path="res://stone_physics.tscn" id="24_r71f8"]
 [ext_resource type="PackedScene" uid="uid://rajdd5xvxwxn" path="res://stone_edit.tscn" id="25_7bvgl"]
 [ext_resource type="Texture2D" uid="uid://d3htq5rwk4qvp" path="res://Texture/rock32_clean.png" id="26_pr4vs"]
@@ -4619,11 +4619,11 @@ zoom = Vector2(1.6, 1.6)
 [node name="PlankEdit" parent="." instance=ExtResource("8_0x8ji")]
 position = Vector2(44, 21)
 
-[node name="PlankButton" type="Button" parent="."]
-offset_left = 306.0
-offset_top = -210.0
-offset_right = 380.0
-offset_bottom = -195.0
+[node name="Label3" type="Button" parent="."]
+offset_left = 635.0
+offset_top = -394.0
+offset_right = 709.0
+offset_bottom = -379.0
 icon = ExtResource("9_j7hcv")
 
 [node name="EditSpawnParent" type="Node2D" parent="."]
@@ -4632,9 +4632,9 @@ position = Vector2(-1, 20)
 [node name="PhysicsSpawnParent" type="Node2D" parent="."]
 
 [node name="PlayButton" type="Button" parent="."]
-offset_left = 168.0
+offset_left = 346.0
 offset_top = -31.0
-offset_right = 215.0
+offset_right = 393.0
 text = "PLAY"
 
 [node name="PlankPhysics1" parent="." instance=ExtResource("10_tfu07")]
@@ -4655,10 +4655,10 @@ position = Vector2(-11, 12)
 shape = SubResource("CapsuleShape2D_cieh7")
 
 [node name="PAUSE" parent="." instance=ExtResource("14_uqrs5")]
-offset_left = 83.0
-offset_top = -77.0
-offset_right = 83.0
-offset_bottom = -77.0
+offset_left = 257.0
+offset_top = -136.0
+offset_right = 257.0
+offset_bottom = -136.0
 
 [node name="Chest" type="Area2D" parent="."]
 position = Vector2(528, -61)
@@ -4676,16 +4676,16 @@ position = Vector2(0, -11)
 shape = SubResource("RectangleShape2D_6a8yw")
 
 [node name="MaterialsLabel" type="Label" parent="."]
-offset_left = 5.0
-offset_top = -210.0
-offset_right = 31.0
-offset_bottom = -187.0
+offset_left = 19.0
+offset_top = -396.0
+offset_right = 45.0
+offset_bottom = -373.0
 
-[node name="Label" type="Label" parent="."]
-offset_left = 276.0
-offset_top = -214.0
-offset_right = 316.0
-offset_bottom = -191.0
+[node name="Label4" type="Label" parent="."]
+offset_left = 605.0
+offset_top = -398.0
+offset_right = 645.0
+offset_bottom = -375.0
 text = "100"
 
 [node name="PlacementArea" type="Area2D" parent="."]
@@ -4710,18 +4710,18 @@ mass = 1.0
 [node name="StoneEdit" parent="." instance=ExtResource("25_7bvgl")]
 position = Vector2(186, 25)
 
-[node name="StoneButton" type="Button" parent="."]
-offset_left = 339.0
-offset_top = -189.0
-offset_right = 379.0
-offset_bottom = -149.0
+[node name="Label5" type="Button" parent="."]
+offset_left = 668.0
+offset_top = -373.0
+offset_right = 708.0
+offset_bottom = -333.0
 icon = ExtResource("26_pr4vs")
 
 [node name="Label2" type="Label" parent="."]
-offset_left = 308.0
-offset_top = -182.0
-offset_right = 348.0
-offset_bottom = -159.0
+offset_left = 637.0
+offset_top = -366.0
+offset_right = 677.0
+offset_bottom = -343.0
 text = "100"
 
 [node name="DebugOverlay" type="CanvasLayer" parent="."]
@@ -4730,8 +4730,8 @@ follow_viewport_enabled = true
 
 [node name="OverlayCanvas" type="Node2D" parent="DebugOverlay"]
 
-[connection signal="pressed" from="PlankButton" to="." method="_on_plank_button_pressed"]
+[connection signal="pressed" from="Label3" to="." method="_on_plank_button_pressed"]
 [connection signal="pressed" from="PlayButton" to="." method="_on_play_button_pressed"]
 [connection signal="body_entered" from="Chest" to="Chest" method="_on_body_entered"]
 [connection signal="pressed" from="ResetButton" to="." method="_on_reset_button_pressed"]
-[connection signal="pressed" from="StoneButton" to="." method="_on_stone_button_pressed"]
+[connection signal="pressed" from="Label5" to="." method="_on_stone_button_pressed"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=47 format=4 uid="uid://b1vmnrywhbv8w"]
+[gd_scene load_steps=50 format=4 uid="uid://b1vmnrywhbv8w"]
 
 [ext_resource type="Script" uid="uid://i8wowvpwqoee" path="res://level_5_scene.gd" id="1_b07in"]
 [ext_resource type="Texture2D" uid="uid://dd4ki1gxkt562" path="res://tile_castle_grey.png" id="2_3co8r"]
@@ -13,7 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://da1cjye7l2agn" path="res://free-villagers-sprite-sheets-pixel-art/6 Girl/Girl_idle.png" id="7_xf65v"]
 [ext_resource type="Texture2D" uid="uid://dobag6f1v15sc" path="res://free-villagers-sprite-sheets-pixel-art/6 Girl/Girl_walk.png" id="8_muca7"]
 [ext_resource type="PackedScene" uid="uid://de58xkfxf4cer" path="res://Pause Menu.tscn" id="9_vvle8"]
-[ext_resource type="Script" uid="uid://c1kvtwu4rta3d" path="res://chest.gd" id="10_ty36o"]
+[ext_resource type="Script" path="res://chest.gd" id="10_ty36o"]
 [ext_resource type="Texture2D" uid="uid://gnwcx6rkkr2k" path="res://Texture/Chest6.png" id="11_i2lr6"]
 [ext_resource type="Texture2D" uid="uid://memmb2a3c8gk" path="res://Texture/Chest7.png" id="12_pmrp2"]
 [ext_resource type="Texture2D" uid="uid://dovwl3kxuc8gy" path="res://Texture/Chest5.png" id="13_7xsmx"]
@@ -21,7 +21,7 @@
 [ext_resource type="Texture2D" uid="uid://dp8kiiwwyrq38" path="res://Texture/Chest3.png" id="15_eo53l"]
 [ext_resource type="Texture2D" uid="uid://6r57sd268vh7" path="res://Texture/Chest2.png" id="16_xoxvb"]
 [ext_resource type="Texture2D" uid="uid://umc73tpyhtsv" path="res://Texture/Chest1.png" id="17_ny2mw"]
-[ext_resource type="Script" uid="uid://cetw5o470fdqk" path="res://placement_area.gd" id="18_1u7ih"]
+[ext_resource type="Script" path="res://placement_area.gd" id="18_1u7ih"]
 [ext_resource type="PackedScene" uid="uid://dpaxpn8y43xr1" path="res://stone_physics.tscn" id="19_7v1sq"]
 [ext_resource type="PackedScene" uid="uid://rajdd5xvxwxn" path="res://stone_edit.tscn" id="20_0hxhq"]
 [ext_resource type="Texture2D" uid="uid://d3htq5rwk4qvp" path="res://Texture/rock32_clean.png" id="21_2lmpj"]
@@ -1456,19 +1456,19 @@ tile_map_data = PackedByteArray("AAAAAPT/BAAAAAEAAAAAAPX/BAAAAAIAAAAAAPb/BAAAAAM
 tile_set = SubResource("TileSet_eo53l")
 
 [node name="TileMapLayer3" type="TileMapLayer" parent="TileMap"]
-tile_map_data = PackedByteArray("AAAOAPX/AAAAAAcAAAAOAPb/AAAAAAgAAAAPAPX/AAABAAcAAAAPAPb/AAABAAgAAAAQAPX/AAACAAcAAAAQAPb/AAACAAgAAAARAPX/AAADAAcAAAARAPb/AAADAAgAAAASAPT/AAAAAAcAAAASAPX/AAAAAAgAAAATAPT/AAABAAcAAAATAPX/AAABAAgAAAAUAPT/AAACAAcAAAAUAPX/AAACAAgAAAAVAPT/AAADAAcAAAAVAPX/AAADAAgAAAAXAPL/AAAAAAcAAAAXAPP/AAAAAAgAAAAYAPL/AAABAAcAAAAYAPP/AAABAAgAAAAZAPL/AAACAAcAAAAZAPP/AAACAAgAAAAaAPL/AAADAAcAAAAaAPP/AAACAAgAAAAbAPP/AAACAAgAAAA=")
+tile_map_data = PackedByteArray("AAAgAPX/AAADAAcAABAgAPb/AAADAAgAABAhAPX/AAABAAcAABAhAPb/AAABAAgAABAiAPX/AAAAAAcAABAiAPb/AAAAAAgAABAKAPX/AAAAAAcAAAAKAPb/AAAAAAgAAAALAPX/AAABAAcAAAALAPb/AAABAAgAAAAMAPX/AAACAAcAAAAMAPb/AAACAAgAAAANAPX/AAADAAcAAAAOAPT/AAAAAAcAAAAOAPX/AAAAAAgAAAAPAPT/AAABAAcAAAAPAPX/AAABAAgAAAAQAPT/AAACAAcAAAAQAPX/AAACAAgAAAATAPL/AAAAAAcAAAATAPP/AAAAAAgAAAAUAPL/AAABAAcAAAAUAPP/AAABAAgAAAAVAPL/AAACAAcAAAAVAPP/AAACAAgAAAAWAPL/AAACAAcAAAAWAPP/AAACAAgAABAXAPL/AAACAAcAAAAXAPP/AAACAAgAABAYAPL/AAACAAcAABAYAPP/AAACAAgAABAZAPL/AAABAAcAABAZAPP/AAABAAgAABAcAPT/AAADAAcAABAcAPX/AAADAAgAABAdAPT/AAACAAcAABAdAPX/AAACAAgAABAeAPT/AAABAAcAABAeAPX/AAABAAgAABAfAPX/AAAAAAgAABANAPb/AAADAAgAAAARAPT/AAADAAcAAAARAPX/AAADAAgAAAAaAPL/AAAAAAcAABAaAPP/AAAAAAgAABAfAPT/AAAAAAcAABA=")
 tile_set = SubResource("TileSet_eo53l")
 
 [node name="TileMapLayer4" type="TileMapLayer" parent="TileMap"]
-tile_map_data = PackedByteArray("AAARAPX/AAAAAAkAAAASAPX/AAABAAkAAAATAPX/AAACAAkAAAAUAPX/AAADAAkAAAAVAPT/AAAAAAkAAAAVAPX/AAAAAAoAAAAWAPT/AAABAAkAAAAWAPX/AAABAAoAAAAXAPP/AAAAAAkAAAAXAPT/AAAAAAoAAAAXAPX/AAABAAoAAAAYAPP/AAABAAkAAAAYAPT/AAABAAoAAAAYAPX/AAABAAoAAAAZAPP/AAACAAkAAAAZAPT/AAABAAoAAAAZAPX/AAABAAoAAAAaAPP/AAADAAkAAAAaAPT/AAABAAoAAAAaAPX/AAABAAoAAAAbAPT/AAABAAoAAAAbAPX/AAABAAoAAAANAPb/AAAAAAkAAAANAPf/AAAAAAoAAAAOAPb/AAABAAkAAAAOAPf/AAABAAoAAAAPAPb/AAACAAkAAAAPAPf/AAABAAoAAAAQAPb/AAADAAkAAAAQAPf/AAABAAoAAAARAPb/AAAAAAoAAAARAPf/AAABAAoAAAASAPb/AAABAAoAAAASAPf/AAABAAoAAAATAPb/AAABAAoAAAATAPf/AAABAAoAAAAUAPb/AAABAAoAAAAUAPf/AAABAAoAAAAVAPb/AAABAAoAAAAVAPf/AAABAAoAAAAWAPb/AAABAAoAAAAWAPf/AAABAAoAAAAXAPb/AAABAAoAAAAXAPf/AAABAAoAAAAYAPb/AAABAAoAAAAYAPf/AAABAAoAAAAZAPb/AAABAAoAAAAZAPf/AAABAAoAAAAaAPb/AAABAAoAAAAaAPf/AAABAAoAAAAbAPb/AAABAAoAAAAbAPf/AAABAAoAAAA=")
+tile_map_data = PackedByteArray("AAAhAPb/AAADAAkAABAhAPf/AAABAAoAABAJAPb/AAAAAAkAAAAJAPf/AAAAAAoAAAAKAPb/AAABAAkAAAAKAPf/AAABAAoAAAALAPb/AAACAAkAAAALAPf/AAABAAoAAAAMAPb/AAADAAkAAAAMAPf/AAABAAoAAAANAPX/AAAAAAkAAAANAPb/AAAAAAoAAAANAPf/AAABAAoAAAAOAPX/AAABAAkAAAAOAPb/AAABAAoAAAAOAPf/AAABAAoAAAAPAPX/AAACAAkAAAAPAPb/AAABAAoAAAAPAPf/AAABAAoAAAAQAPX/AAADAAkAAAAQAPb/AAABAAoAAAAQAPf/AAABAAoAAAARAPT/AAAAAAkAAAARAPX/AAAAAAoAAAARAPb/AAABAAoAAAARAPf/AAABAAoAAAASAPT/AAABAAkAAAASAPX/AAABAAoAAAASAPb/AAABAAoAAAASAPf/AAABAAoAAAATAPP/AAAAAAkAAAATAPT/AAAAAAoAAAATAPX/AAABAAoAAAATAPb/AAABAAoAAAATAPf/AAABAAoAAAAUAPP/AAABAAkAAAAUAPT/AAABAAoAAAAUAPX/AAABAAoAAAAUAPb/AAABAAoAAAAUAPf/AAABAAoAAAAVAPP/AAACAAkAAAAVAPT/AAABAAoAAAAVAPX/AAABAAoAAAAVAPb/AAABAAoAAAAVAPf/AAABAAoAAAAWAPP/AAABAAcAAAAWAPT/AAABAAoAABAWAPX/AAABAAoAABAWAPb/AAABAAoAABAWAPf/AAABAAoAABAXAPP/AAABAAcAAAAXAPT/AAABAAoAABAXAPX/AAABAAoAABAXAPb/AAABAAoAABAXAPf/AAABAAoAABAYAPT/AAABAAoAABAYAPX/AAABAAoAABAYAPb/AAABAAoAABAYAPf/AAABAAoAABAZAPT/AAABAAoAABAZAPX/AAABAAoAABAZAPb/AAABAAoAABAZAPf/AAABAAoAABAaAPX/AAABAAoAABAaAPb/AAABAAoAABAaAPf/AAABAAoAABAbAPX/AAABAAoAABAbAPb/AAABAAoAABAbAPf/AAABAAoAABAcAPX/AAAAAAoAABAcAPb/AAABAAoAABAcAPf/AAABAAoAABAdAPX/AAADAAkAABAdAPb/AAABAAoAABAdAPf/AAABAAoAABAeAPb/AAABAAoAABAeAPf/AAABAAoAABAfAPb/AAABAAoAABAfAPf/AAABAAoAABAgAPb/AAAAAAoAABAgAPf/AAABAAoAABAYAPP/AAACAAkAABAZAPP/AAABAAkAABAaAPP/AAAAAAkAABAaAPT/AAAAAAoAABAbAPT/AAABAAkAABAcAPT/AAAAAAkAABAeAPX/AAACAAkAABAfAPX/AAABAAkAABAgAPX/AAAAAAkAABAiAPb/AAACAAkAABAiAPf/AAABAAoAABAjAPb/AAABAAkAABAjAPf/AAABAAoAABA=")
 tile_set = SubResource("TileSet_eo53l")
 
 [node name="TileMapLayer6" type="TileMapLayer" parent="TileMap"]
-tile_map_data = PackedByteArray("AAAYAPX/AAALAAsAAAAZAPX/AAAMAAsAAAAOAPf/AAAOAAYAAAAUAPb/AAAOAAYAAAAXAPX/AAAOAAYAAAAYAPb/AAALAAwAAAAYAPf/AAALAA0AAAAZAPb/AAAMAAwAAAAZAPf/AAAMAA0AAAAaAPX/AAAOAAYAAAA=")
+tile_map_data = PackedByteArray("AAAOAPf/AAAOAAYAAAAUAPb/AAAOAAYAAAAXAPX/AAAOAAYAAAAYAPX/AAALAAsAAAAYAPb/AAALAAwAAAAYAPf/AAALAA0AAAAZAPX/AAAMAAsAAAAZAPb/AAAMAAwAAAAZAPf/AAAMAA0AAAAaAPX/AAAOAAYAAAA=")
 tile_set = SubResource("TileSet_eo53l")
 
 [node name="TileMapLayer2" type="TileMapLayer" parent="TileMap"]
-tile_map_data = PackedByteArray("AAAAAPv/AQAJAAwAAAAAAPz/AQAJABEAAAABAPv/AQAJAAwAAAABAPz/AQAJABEAAAACAPv/AQAJAAwAAAACAPz/AQAJABEAAAADAPv/AQAJAAwAAAADAPz/AQAJABEAAAAEAPv/AQAJAAwAAAAEAPz/AQAJABEAAAAFAPv/AQAJAAwAAAAFAPz/AQAJABEAAAAGAPv/AQAJAAwAAAAGAPz/AQAJABEAAAAHAPv/BAACAAgAAAAHAPz/AQAJABEAAAAIAPv/BAACAAgAAAAIAPz/AQAJABEAAAAJAPz/AQAJABEAAAANAPj/AAAAAAQAAAAOAPj/AAABAAQAAAAPAPj/AAACAAQAAAAQAPj/AAADAAQAAAARAPj/AAAEAAQAAAASAPj/AAAFAAQAAAATAPj/AAAGAAQAAAAUAPj/AAAAAAQAAAAVAPj/AAABAAQAAAAWAPj/AAACAAQAAAAXAPj/AAADAAQAAAAYAPj/AAAEAAQAAAAZAPj/AAAFAAQAAAAaAPj/AAAGAAQAAAAbAPj/AAAAAAQAAAANAPn/AAAAAAUAAAANAPr/AAAAAAYAAAAOAPn/AAABAAUAAAAOAPr/AAABAAYAAAAPAPn/AAACAAUAAAAPAPr/AAABAAYAAAAQAPn/AAADAAUAAAAQAPr/AAACAAYAAAARAPn/AAAEAAUAAAARAPr/AAADAAYAAAASAPn/AAAFAAUAAAASAPr/AAAEAAYAAAATAPn/AAAGAAUAAAATAPr/AAAFAAYAAAAUAPn/AAAAAAUAAAAUAPr/AAAAAAYAAAAVAPn/AAABAAUAAAAVAPr/AAABAAYAAAAWAPn/AAACAAUAAAAWAPr/AAADAAYAAAAXAPn/AAADAAUAAAAXAPr/AAAEAAYAAAAYAPn/AAAEAAUAAAAYAPr/AAAFAAYAAAAZAPn/AAAFAAUAAAAZAPr/AAAAAAYAAAAaAPn/AAAGAAUAAAAaAPr/AAABAAYAAAAbAPn/AAAAAAUAAAAbAPr/AAACAAYAAAA=")
+tile_map_data = PackedByteArray("AAAAAPv/AQAJAAwAAAAAAPz/AQAJABEAAAABAPv/AQAJAAwAAAABAPz/AQAJABEAAAACAPz/AQAJABEAAAADAPz/AQAJABEAAAAjAPj/AAAAAAQAABAiAPj/AAADAAQAABAhAPj/AAAEAAQAABAjAPn/AAAAAAUAABAiAPn/AAADAAUAABAhAPn/AAAEAAUAABAjAPr/AAAAAAYAABAiAPr/AAACAAYAABAhAPr/AAADAAYAABAIAPj/AAAAAAQAAAAIAPn/AAAAAAUAAAAIAPr/AAAAAAYAAAAJAPj/AAABAAQAAAAJAPn/AAABAAUAAAAJAPr/AAABAAYAAAAKAPj/AAACAAQAAAAKAPn/AAACAAUAAAAKAPr/AAABAAYAAAALAPj/AAADAAQAAAALAPn/AAADAAUAAAALAPr/AAACAAYAAAAMAPj/AAAEAAQAAAAMAPn/AAAEAAUAAAAMAPr/AAADAAYAAAANAPj/AAAFAAQAAAANAPn/AAAFAAUAAAANAPr/AAAEAAYAAAAOAPj/AAAGAAQAAAAOAPn/AAAGAAUAAAAOAPr/AAAFAAYAAAAPAPj/AAAAAAQAAAAPAPn/AAAAAAUAAAAPAPr/AAAAAAYAAAAQAPj/AAABAAQAAAAQAPn/AAABAAUAAAAQAPr/AAABAAYAAAARAPj/AAACAAQAAAARAPn/AAACAAUAAAARAPr/AAADAAYAAAASAPj/AAADAAQAAAASAPn/AAADAAUAAAASAPr/AAAEAAYAAAATAPj/AAAEAAQAAAATAPn/AAAEAAUAAAATAPr/AAAFAAYAAAAUAPj/AAAFAAQAAAAUAPn/AAAFAAUAAAAUAPr/AAAAAAYAAAAVAPj/AAAGAAQAAAAVAPn/AAAGAAUAAAAVAPr/AAABAAYAAAAWAPj/AAAAAAQAAAAWAPn/AAAAAAUAAAAWAPr/AAACAAYAAAAXAPj/AAAAAAQAABAXAPn/AAAAAAUAABAXAPr/AAACAAYAABAYAPj/AAAGAAQAABAYAPn/AAAGAAUAABAYAPr/AAABAAYAABAZAPj/AAAFAAQAABAZAPn/AAAFAAUAABAZAPr/AAAAAAYAABAaAPj/AAAEAAQAABAaAPn/AAAEAAUAABAaAPr/AAAFAAYAABAbAPj/AAADAAQAABAbAPn/AAADAAUAABAbAPr/AAAEAAYAABAcAPj/AAACAAQAABAcAPn/AAACAAUAABAcAPr/AAADAAYAABAdAPj/AAABAAQAABAdAPn/AAABAAUAABAdAPr/AAABAAYAABAeAPj/AAAAAAQAABAeAPn/AAAAAAUAABAeAPr/AAAAAAYAABAfAPj/AAAGAAQAABAfAPn/AAAGAAUAABAfAPr/AAAFAAYAABAgAPj/AAAFAAQAABAgAPn/AAAFAAUAABAgAPr/AAAEAAYAABAJAPv/BAACAAgAAAAKAPv/BAACAAgAAAAGAPz/AQAJABEAAAAHAPz/AQAJABEAAAAIAPz/AQAJABEAAAAJAPz/AQAJABEAAAAEAPz/AQAJABEAAAAFAPz/AQAJABEAAAA=")
 tile_set = SubResource("TileSet_eo53l")
 
 [node name="TileMapLayer7" type="TileMapLayer" parent="TileMap"]
@@ -1482,12 +1482,11 @@ zoom = Vector2(1.3, 1.3)
 position = Vector2(44, 21)
 
 [node name="PlankButton" type="Button" parent="."]
-offset_left = 306.0
-offset_top = -210.0
-offset_right = 380.0
-offset_bottom = -195.0
+offset_left = 806.0
+offset_top = -487.0
+offset_right = 880.0
+offset_bottom = -472.0
 icon = ExtResource("4_7wl8g")
-metadata/_edit_use_anchors_ = true
 
 [node name="EditSpawnParent" type="Node2D" parent="."]
 position = Vector2(-1, 20)
@@ -1495,9 +1494,10 @@ position = Vector2(-1, 20)
 [node name="PhysicsSpawnParent" type="Node2D" parent="."]
 
 [node name="PlayButton" type="Button" parent="."]
-offset_left = 168.0
-offset_top = -31.0
-offset_right = 215.0
+offset_left = 423.0
+offset_top = -39.0
+offset_right = 470.0
+offset_bottom = -8.0
 text = "PLAY"
 metadata/_edit_use_anchors_ = true
 
@@ -1507,7 +1507,7 @@ gravity_scale = 0.1
 linear_damp = 100.0
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
-position = Vector2(34, -77)
+position = Vector2(36, -93)
 script = ExtResource("6_8dw7w")
 move_speed = 80.0
 gravity = 300.0
@@ -1521,16 +1521,16 @@ position = Vector2(-11, 12)
 shape = SubResource("CapsuleShape2D_o11vq")
 
 [node name="PAUSE" parent="." instance=ExtResource("9_vvle8")]
-offset_left = 83.0
-offset_top = -77.0
-offset_right = 83.0
-offset_bottom = -77.0
+offset_left = 347.0
+offset_top = -200.0
+offset_right = 347.0
+offset_bottom = -200.0
 metadata/_edit_use_anchors_ = true
 
 [node name="Chest" type="Area2D" parent="."]
-position = Vector2(809, -223)
+position = Vector2(798, -159)
 script = ExtResource("10_ty36o")
-next_scene = "uid://ddwy5dyswoacx"
+next_scene = "uid://bke3bdj7lov53"
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Chest"]
 position = Vector2(0, -4)
@@ -1543,16 +1543,16 @@ position = Vector2(0, -11)
 shape = SubResource("RectangleShape2D_usdmc")
 
 [node name="MaterialsLabel" type="Label" parent="."]
-offset_left = 5.0
-offset_top = -210.0
-offset_right = 31.0
-offset_bottom = -187.0
+offset_left = 17.0
+offset_top = -477.0
+offset_right = 43.0
+offset_bottom = -454.0
 
 [node name="Label" type="Label" parent="."]
-offset_left = 276.0
-offset_top = -214.0
-offset_right = 316.0
-offset_bottom = -191.0
+offset_left = 776.0
+offset_top = -491.0
+offset_right = 816.0
+offset_bottom = -468.0
 text = "100"
 
 [node name="PlacementArea" type="Area2D" parent="."]
@@ -1560,7 +1560,7 @@ position = Vector2(193, -106)
 script = ExtResource("18_1u7ih")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlacementArea"]
-position = Vector2(251, -169)
+position = Vector2(251, -162)
 shape = SubResource("RectangleShape2D_0yvig")
 
 [node name="ResetButton" type="Button" parent="."]
@@ -1578,17 +1578,17 @@ mass = 100.0
 position = Vector2(186, 25)
 
 [node name="StoneButton" type="Button" parent="."]
-offset_left = 348.0
-offset_top = -191.0
-offset_right = 388.0
-offset_bottom = -151.0
+offset_left = 841.0
+offset_top = -467.0
+offset_right = 881.0
+offset_bottom = -427.0
 icon = ExtResource("21_2lmpj")
 
 [node name="Label2" type="Label" parent="."]
-offset_left = 308.0
-offset_top = -182.0
-offset_right = 348.0
-offset_bottom = -159.0
+offset_left = 801.0
+offset_top = -458.0
+offset_right = 841.0
+offset_bottom = -435.0
 text = "100"
 
 [node name="DebugOverlay" type="CanvasLayer" parent="."]
@@ -1598,10 +1598,10 @@ follow_viewport_enabled = true
 [node name="OverlayCanvas" type="Node2D" parent="DebugOverlay"]
 
 [node name="LongPlankButton" type="Button" parent="."]
-offset_left = 247.0
-offset_top = -144.0
-offset_right = 385.0
-offset_bottom = -129.0
+offset_left = 740.0
+offset_top = -420.0
+offset_right = 878.0
+offset_bottom = -405.0
 icon = ExtResource("22_31y7q")
 
 [node name="LongPlankPhysics" parent="." instance=ExtResource("23_3co8r")]
@@ -1609,6 +1609,13 @@ position = Vector2(91, 83)
 
 [node name="LongPlankEdit" parent="." instance=ExtResource("23_7wl8g")]
 position = Vector2(76, 57)
+
+[node name="Label3" type="Label" parent="."]
+offset_left = 707.0
+offset_top = -423.0
+offset_right = 747.0
+offset_bottom = -400.0
+text = "200"
 
 [connection signal="pressed" from="PlankButton" to="." method="_on_plank_button_pressed"]
 [connection signal="pressed" from="PlayButton" to="." method="_on_play_button_pressed"]
