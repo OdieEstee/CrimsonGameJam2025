@@ -3,6 +3,8 @@ extends Node2D
 @onready var plank_physics_scene = preload("res://plank_physics_1.tscn")
 @onready var stone_edit_scene = preload("res://stone_edit.tscn")
 @onready var stone_physics_scene = preload("res://stone_physics.tscn")
+@onready var long_plank_edit_scene = preload("res://long_plank_edit.tscn")
+@onready var long_plank_physics_scene = preload("res://long_plank_physics.tscn")
 @onready var edit_spawn_parent = $EditSpawnParent
 @onready var physics_spawn_parent = $PhysicsSpawnParent
 @onready var label = $MaterialsLabel
@@ -13,6 +15,7 @@ var starting_player_pos : Vector2
 var materials : int = 10000
 var plank_cost : int = 100
 var stone_cost : int = 100
+var long_plank_cost : int = 200
 var valid_placement : bool = true
 
 func _process(delta):
@@ -104,6 +107,12 @@ func _on_play_button_pressed() -> void:
 				stone_physics_instance.position.y += 20
 				stone_physics_instance.position.x -= 1
 				physics_spawn_parent.add_child(stone_physics_instance)
+			if obj.type == "Long Plank":
+				var long_plank_physics_instance = long_plank_physics_scene.instantiate()
+				long_plank_physics_instance.position = obj.position
+				long_plank_physics_instance.position.y += 20
+				long_plank_physics_instance.position.x -= 1
+				physics_spawn_parent.add_child(long_plank_physics_instance)
 
 # --- helpers ---
 func sprite_rect_global(spr: Sprite2D) -> Rect2:
@@ -150,8 +159,10 @@ func _input(event):
 					obj.queue_free()
 					if obj.type == "Plank":
 						materials += plank_cost
-					if obj.type == "Stonep":
+					if obj.type == "Stone":
 						materials += stone_cost
+					if obj.type == "Long Plank":
+						materials += long_plank_cost
 
 
 func _on_stone_button_pressed() -> void:
@@ -162,3 +173,12 @@ func _on_stone_button_pressed() -> void:
 		stone_edit_instance.position = Vector2(200, -200)
 		edit_spawn_parent.add_child(stone_edit_instance)
 	
+
+
+func _on_long_plank_button_pressed() -> void:
+	if materials >= long_plank_cost:
+		materials -= long_plank_cost
+		print("Spawn long plank")
+		var long_plank_edit_instance = long_plank_edit_scene.instantiate()
+		long_plank_edit_instance.position = Vector2(200, -200)
+		edit_spawn_parent.add_child(long_plank_edit_instance)
