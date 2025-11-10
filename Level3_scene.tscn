@@ -6656,6 +6656,12 @@ offset_right = 348.0
 offset_bottom = -159.0
 text = "100"
 
+[node name="DebugOverlay" type="CanvasLayer" parent="."]
+layer = 10
+follow_viewport_enabled = true
+
+[node name="OverlayCanvas" type="Node2D" parent="DebugOverlay"]
+
 [connection signal="pressed" from="PlankButton" to="." method="_on_plank_button_pressed"]
 [connection signal="pressed" from="PlayButton" to="." method="_on_play_button_pressed"]
 [connection signal="body_entered" from="Chest" to="Chest" method="_on_body_entered"]

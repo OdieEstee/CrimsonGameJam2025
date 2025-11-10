@@ -7,6 +7,7 @@ extends Node2D
 @onready var physics_spawn_parent = $PhysicsSpawnParent
 @onready var label = $MaterialsLabel
 @onready var placement_area = $PlacementArea
+@onready var _overlay := $DebugOverlay/OverlayCanvas
 
 var starting_player_pos : Vector2
 var materials : int = 100
@@ -16,9 +17,22 @@ var valid_placement : bool = true
 
 func _process(delta):
 	label.text = "Materials: " + str(materials)
-	queue_redraw()
-	
-func _draw():
+	_redraw_overlay()
+
+func _exit_tree():
+	# clear overlay when scene is freed (avoids ghost drawings)
+	if is_instance_valid(_overlay):
+		RenderingServer.canvas_item_clear(_overlay.get_canvas_item())
+
+func _redraw_overlay():
+	if _overlay == null:
+		return
+
+	var ci : RID = _overlay.get_canvas_item()
+	# wipe previous frame
+	RenderingServer.canvas_item_clear(ci)
+
+	# ---- draw your outlines ----
 	for obj in edit_spawn_parent.get_children():
 		var spr := obj.get_node_or_null("Sprite2D") as Sprite2D
 		var area_cs := placement_area.get_node_or_null("CollisionShape2D") as CollisionShape2D
@@ -26,18 +40,29 @@ func _draw():
 			continue
 
 		if !is_sprite_fully_inside_area(spr, area_cs):
-			var r := spr.get_rect()  # sprite-local rect (no rotation/scale)
-			# Convert to THIS root node's local space with simple translation only
-			var offset := spr.global_position - global_position
+			var r := spr.get_rect() # no rotation/scale assumed
+			var base := spr.global_position
 
-			var q0 := offset + r.position
-			var q1 := offset + r.position + Vector2(r.size.x, 0)
-			var q2 := offset + r.position + r.size
-			var q3 := offset + r.position + Vector2(0, r.size.y)
+			var q0 := base + r.position
+			var q1 := base + r.position + Vector2(r.size.x, 0)
+			var q2 := base + r.position + r.size
+			var q3 := base + r.position + Vector2(0, r.size.y)
 
-			draw_colored_polygon([q0, q1, q2, q3], Color(1, 0, 0, 0.25))
-			draw_polyline([q0, q1, q2, q3, q0], Color(1, 0, 0), 2.0, true)
-			
+			# fill
+			RenderingServer.canvas_item_add_polygon(
+				ci,
+				PackedVector2Array([q0, q1, q2, q3]),
+				PackedColorArray([Color(1, 0, 0, 0.25)])
+			)
+			# outline
+			RenderingServer.canvas_item_add_polyline(
+				ci,
+				PackedVector2Array([q0, q1, q2, q3, q0]),
+				PackedColorArray([Color(1, 0, 0)]),
+				2.0,    # width
+				true    # antialiased
+			)
+
 func _ready():
 	starting_player_pos = $CharacterBody2D.position
 

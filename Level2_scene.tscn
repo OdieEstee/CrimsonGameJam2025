@@ -2045,6 +2045,7 @@ size = Vector2(18, 14)
 size = Vector2(108.5, 56.875)
 
 [node name="Level2Scene" type="Node2D"]
+z_index = -1
 script = ExtResource("1_ptoke")
 metadata/_edit_horizontal_guides_ = [-360.0]
 
@@ -2167,6 +2168,12 @@ offset_left = 165.0
 offset_top = -31.0
 offset_right = 219.0
 text = "RESET"
+
+[node name="DebugOverlay" type="CanvasLayer" parent="."]
+layer = 10
+follow_viewport_enabled = true
+
+[node name="OverlayCanvas" type="Node2D" parent="DebugOverlay"]
 
 [connection signal="pressed" from="PlankButton" to="." method="_on_plank_button_pressed"]
 [connection signal="pressed" from="PlayButton" to="." method="_on_play_button_pressed"]
