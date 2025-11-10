@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://b1u4030843lpn"]
+
+[ext_resource type="Texture2D" uid="uid://1x8r5qmpb7gb" path="res://Texture/longplank.png" id="1_chtbe"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3co8r"]
+size = Vector2(127.27273, 5.454548)
+
+[node name="LongPlankPhysics" type="RigidBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(1.1, 1.1)
+texture = ExtResource("1_chtbe")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(1.1, 1.1)
+shape = SubResource("RectangleShape2D_3co8r")

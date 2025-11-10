@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://c0l4hhs4abbqd" path="res://Texture/Plank.png" id="1_1e1g6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1e1g6"]
-size = Vector2(112, 6)
+size = Vector2(70, 6)
 
 [node name="PlankPhysics1" type="RigidBody2D"]
 gravity_scale = 0.4

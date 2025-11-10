@@ -5,7 +5,7 @@
 [ext_resource type="Script" uid="uid://crj03aqeenifg" path="res://area_2d.gd" id="3_q42my"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hqdf6"]
-size = Vector2(112, 6)
+size = Vector2(70, 6)
 
 [node name="PlankEdit" type="CharacterBody2D"]
 script = ExtResource("1_hqdf6")
