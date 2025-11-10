@@ -16,7 +16,28 @@ var valid_placement : bool = true
 
 func _process(delta):
 	label.text = "Materials: " + str(materials)
+	queue_redraw()
 	
+func _draw():
+	for obj in edit_spawn_parent.get_children():
+		var spr := obj.get_node_or_null("Sprite2D") as Sprite2D
+		var area_cs := placement_area.get_node_or_null("CollisionShape2D") as CollisionShape2D
+		if spr == null or area_cs == null:
+			continue
+
+		if !is_sprite_fully_inside_area(spr, area_cs):
+			var r := spr.get_rect()  # sprite-local rect (no rotation/scale)
+			# Convert to THIS root node's local space with simple translation only
+			var offset := spr.global_position - global_position
+
+			var q0 := offset + r.position
+			var q1 := offset + r.position + Vector2(r.size.x, 0)
+			var q2 := offset + r.position + r.size
+			var q3 := offset + r.position + Vector2(0, r.size.y)
+
+			draw_colored_polygon([q0, q1, q2, q3], Color(1, 0, 0, 0.25))
+			draw_polyline([q0, q1, q2, q3, q0], Color(1, 0, 0), 2.0, true)
+
 func _ready():
 	starting_player_pos = $CharacterBody2D.position
 
