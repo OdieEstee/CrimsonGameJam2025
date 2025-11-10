@@ -10,7 +10,7 @@ extends Node2D
 @onready var _overlay := $DebugOverlay/OverlayCanvas
 
 var starting_player_pos : Vector2
-var materials : int = 10000
+var materials : int = 2000
 var plank_cost : int = 100
 var stone_cost : int = 100
 var valid_placement : bool = true
@@ -83,7 +83,7 @@ func _on_play_button_pressed() -> void:
 			valid_placement = false
 	if valid_placement:
 		$CharacterBody2D.move_right = true
-		$Label.visible = false
+		$Label4.visible = false
 		$Label2.visible = false
 		$MaterialsLabel.visible = false
 		$PlankButton.visible = false
@@ -130,8 +130,8 @@ func is_sprite_fully_inside_area(spr: Sprite2D, col: CollisionShape2D) -> bool:
 func _on_reset_button_pressed() -> void:
 	$ResetButton.visible = false
 	$PlayButton.visible = true
-	$Label.visible = true
 	$Label2.visible = true
+	$Label4.visible = true
 	$MaterialsLabel.visible = true
 	$PlankButton.visible = true
 	$StoneButton.visible = true

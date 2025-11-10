@@ -12,7 +12,7 @@ extends Node2D
 @onready var _overlay := $DebugOverlay/OverlayCanvas
 
 var starting_player_pos : Vector2
-var materials : int = 10000
+var materials : int = 400
 var plank_cost : int = 100
 var stone_cost : int = 100
 var long_plank_cost : int = 200

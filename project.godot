@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="All At Once"
-run/main_scene="uid://bdaoc76ycy75l"
+run/main_scene="uid://b1vmnrywhbv8w"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
 
