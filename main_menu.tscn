@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=4 uid="uid://fjqw7l7fiakk"]
+[gd_scene load_steps=21 format=4 uid="uid://fjqw7l7fiakk"]
 
 [ext_resource type="Texture2D" uid="uid://w07a7rbj34wp" path="res://Backgrounds/Clouds.png" id="1_nlkkf"]
 [ext_resource type="Texture2D" uid="uid://4p6ll7a68jlc" path="res://Backgrounds/Grass Mountains.png" id="2_qe12f"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://bt768615tgd0" path="res://Texture/TX Village Props.png" id="5_0o4t1"]
 [ext_resource type="Texture2D" uid="uid://d0ul7bkcd55yq" path="res://Texture/TX Tileset Ground.png" id="6_0k4wn"]
 [ext_resource type="Texture2D" uid="uid://bp3it8kesv2q4" path="res://Texture/TX FX Flame.png" id="7_8qtwp"]
+[ext_resource type="PackedScene" uid="uid://bdaoc76ycy75l" path="res://main_menu_ui.tscn" id="7_dy7ct"]
 [ext_resource type="Texture2D" uid="uid://chicawados531" path="res://Texture/TX FX Torch Flame.png" id="8_dy7ct"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_j5v2v"]
@@ -1001,6 +1002,17 @@ sources/1 = SubResource("TileSetAtlasSource_0k4wn")
 sources/2 = SubResource("TileSetAtlasSource_8qtwp")
 
 [node name="Node2D" type="Node2D"]
+
+[node name="MainMenu" parent="." instance=ExtResource("7_dy7ct")]
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 195.0
+offset_top = -713.0
+offset_right = 729.0
+offset_bottom = -713.0
+grow_horizontal = 1
+grow_vertical = 1
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_oiatc")
